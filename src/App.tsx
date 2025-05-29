@@ -10,8 +10,15 @@ import Legacy from './components/Legacy';
 import Registration from './components/Registration';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import RegistrationForm from './components/RegistrationForm';
 
 function App() {
+  const [showRegistrationForm, setShowRegistrationForm] = React.useState(false);
+
+  if (showRegistrationForm) {
+    return <RegistrationForm />;
+  }
+
   return (
     <div className="font-sans text-gray-800">
       <Navbar />
@@ -22,7 +29,7 @@ function App() {
       <EntrepreneursChallenge />
       <Wellness />
       <Legacy />
-      <Registration />
+      <Registration onRegister={() => setShowRegistrationForm(true)} />
       <Contact />
       <Footer />
     </div>

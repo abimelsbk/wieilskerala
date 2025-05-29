@@ -1,7 +1,7 @@
 import React from 'react';
 import { Check, X } from 'lucide-react';
 
-const PricingTier = ({ title, price, features, recommended = false }) => {
+const PricingTier = ({ title, price, features, recommended = false, onRegister }) => {
   return (
     <div className={`bg-white rounded-2xl shadow-lg overflow-hidden border ${recommended ? 'border-purple-400' : 'border-gray-200'}`}>
       {recommended && (
@@ -31,22 +31,22 @@ const PricingTier = ({ title, price, features, recommended = false }) => {
           ))}
         </ul>
         
-        <a
-          href="#"
-          className={`block text-center py-3 px-6 rounded-lg font-medium transition-colors duration-300 ${
+        <button
+          onClick={onRegister}
+          className={`w-full text-center py-3 px-6 rounded-lg font-medium transition-colors duration-300 ${
             recommended 
               ? 'bg-purple-600 hover:bg-purple-700 text-white' 
               : 'bg-purple-100 hover:bg-purple-200 text-purple-700'
           }`}
         >
           Register Now
-        </a>
+        </button>
       </div>
     </div>
   );
 };
 
-const Registration = () => {
+const Registration = ({ onRegister }) => {
   const commonFeatures = [
     'Access to all sessions',
     'Summit welcome kit',
@@ -110,6 +110,7 @@ const Registration = () => {
               price={tier.price}
               features={tier.features}
               recommended={tier.recommended}
+              onRegister={onRegister}
             />
           ))}
         </div>
