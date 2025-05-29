@@ -26,11 +26,11 @@ const RegistrationForm = () => {
   const getPaymentLink = () => {
     if (formData.isIEEEMember === 'yes') {
       if (formData.isWIEMember === 'yes') {
-        return "https://wie-member-payment.com"; // Replace with actual WIE member payment link
+        return "https://rzp.io/rzp/VhsPp2SL"; // Replace with actual WIE member payment link
       }
-      return "https://ieee-member-payment.com"; // Replace with actual IEEE member payment link
+      return "https://rzp.io/rzp/luxjz0o"; // Replace with actual IEEE member payment link
     }
-    return "https://non-ieee-payment.com"; // Replace with actual non-IEEE member payment link
+    return "https://rzp.io/rzp/9CSbU6m"; // Replace with actual non-IEEE member payment link
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
