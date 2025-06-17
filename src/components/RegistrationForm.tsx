@@ -1,31 +1,33 @@
-import React, { useState } from 'react';
-import { supabase } from '../lib/supabase';
-import toast, { Toaster } from 'react-hot-toast';
+import React, { useState } from "react";
+import { supabase } from "../lib/supabase";
+import toast, { Toaster } from "react-hot-toast";
 
 const RegistrationForm = () => {
   const [formData, setFormData] = useState({
-    email: '',
-    phone: '',
-    location: '',
-    organization: '',
-    designation: '',
-    isIEEEMember: '',
-    ieeeMembershipId: '',
-    isWIEMember: '',
-    wieContributions: ''
+    email: "",
+    phone: "",
+    location: "",
+    organization: "",
+    designation: "",
+    isIEEEMember: "",
+    ieeeMembershipId: "",
+    isWIEMember: "",
+    WIEContributions: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const getPaymentLink = () => {
-    if (formData.isIEEEMember === 'yes') {
-      if (formData.isWIEMember === 'yes') {
+    if (formData.isIEEEMember === "yes") {
+      if (formData.isWIEMember === "yes") {
         return "https://rzp.io/rzp/VhsPp2SL"; // Replace with actual WIE member payment link
       }
       return "https://rzp.io/rzp/luxjz0o"; // Replace with actual IEEE member payment link
@@ -35,13 +37,13 @@ const RegistrationForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
       const paymentLink = getPaymentLink();
       window.location.href = paymentLink;
     } catch (error) {
-      toast.error('Something went wrong. Please try again.');
-      console.error('Error:', error);
+      toast.error("Something went wrong. Please try again.");
+      console.error("Error:", error);
     }
   };
 
@@ -50,11 +52,16 @@ const RegistrationForm = () => {
       <Toaster position="top-right" />
       <div className="container mx-auto px-6">
         <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8">Registration Form</h2>
-          
+          <h2 className="text-3xl font-bold text-gray-800 mb-8">
+            Registration Form
+          </h2>
+
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
                 Email Address
               </label>
               <input
@@ -69,7 +76,10 @@ const RegistrationForm = () => {
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="phone"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
                 Phone Number
               </label>
               <input
@@ -84,7 +94,10 @@ const RegistrationForm = () => {
             </div>
 
             <div>
-              <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="location"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
                 Location
               </label>
               <input
@@ -99,7 +112,10 @@ const RegistrationForm = () => {
             </div>
 
             <div>
-              <label htmlFor="organization" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="organization"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
                 Organization
               </label>
               <input
@@ -114,7 +130,10 @@ const RegistrationForm = () => {
             </div>
 
             <div>
-              <label htmlFor="designation" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="designation"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
                 Designation
               </label>
               <input
@@ -139,7 +158,7 @@ const RegistrationForm = () => {
                       type="radio"
                       name="isIEEEMember"
                       value="yes"
-                      checked={formData.isIEEEMember === 'yes'}
+                      checked={formData.isIEEEMember === "yes"}
                       onChange={handleInputChange}
                       className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300"
                     />
@@ -150,7 +169,7 @@ const RegistrationForm = () => {
                       type="radio"
                       name="isIEEEMember"
                       value="no"
-                      checked={formData.isIEEEMember === 'no'}
+                      checked={formData.isIEEEMember === "no"}
                       onChange={handleInputChange}
                       className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300"
                     />
@@ -159,10 +178,13 @@ const RegistrationForm = () => {
                 </div>
               </div>
 
-              {formData.isIEEEMember === 'yes' && (
+              {formData.isIEEEMember === "yes" && (
                 <>
                   <div>
-                    <label htmlFor="ieeeMembershipId" className="block text-sm font-medium text-gray-700 mb-1">
+                    <label
+                      htmlFor="ieeeMembershipId"
+                      className="block text-sm font-medium text-gray-700 mb-1"
+                    >
                       IEEE Membership ID
                     </label>
                     <input
@@ -186,7 +208,7 @@ const RegistrationForm = () => {
                           type="radio"
                           name="isWIEMember"
                           value="yes"
-                          checked={formData.isWIEMember === 'yes'}
+                          checked={formData.isWIEMember === "yes"}
                           onChange={handleInputChange}
                           className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300"
                         />
@@ -197,7 +219,7 @@ const RegistrationForm = () => {
                           type="radio"
                           name="isWIEMember"
                           value="no"
-                          checked={formData.isWIEMember === 'no'}
+                          checked={formData.isWIEMember === "no"}
                           onChange={handleInputChange}
                           className="h-4 w-4 text-purple-600 focus:ring-purple-500 border-gray-300"
                         />
@@ -206,16 +228,19 @@ const RegistrationForm = () => {
                     </div>
                   </div>
 
-                  {formData.isWIEMember === 'yes' && (
+                  {formData.isWIEMember === "yes" && (
                     <div>
-                      <label htmlFor="wieContributions" className="block text-sm font-medium text-gray-700 mb-1">
+                      <label
+                        htmlFor="WIEContributions"
+                        className="block text-sm font-medium text-gray-700 mb-1"
+                      >
                         What are your contributions to IEEE WIE?
                       </label>
                       <textarea
-                        id="wieContributions"
-                        name="wieContributions"
+                        id="WIEContributions"
+                        name="WIEContributions"
                         required
-                        value={formData.wieContributions}
+                        value={formData.WIEContributions}
                         onChange={handleInputChange}
                         rows={4}
                         className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-transparent"
