@@ -75,20 +75,6 @@ const Hero = () => {
             </a>
           </div>
 
-          <div
-            className="mt-16 flex items-center justify-center animate-fadeIn"
-            style={{ animationDelay: "1s" }}
-          >
-            <a
-              href="https://WIEilskerala.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-purple-300 hover:text-white transition-colors duration-300"
-            >
-              <span>WIEilskerala.org</span>
-              <ExternalLink size={16} />
-            </a>
-          </div>
         </div>
       </div>
 

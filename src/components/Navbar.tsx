@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Menu, X, ExternalLink } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,17 +61,14 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://WIEilskerala.org"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#register"
               className={`flex items-center gap-1 font-medium transition-colors duration-300 ${
                 scrolled
                   ? "text-purple-700 hover:text-purple-900"
                   : "text-white hover:text-purple-200"
               }`}
             >
-              Visit Website
-              <ExternalLink size={16} />
+              Register Now
             </a>
           </div>
 
@@ -106,13 +103,11 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://WIEilskerala.org"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#register"
+              onClick={() => setIsOpen(false)}
               className="flex items-center gap-1 font-medium text-purple-700 py-2 px-4 hover:bg-purple-50 rounded-md transition-colors duration-300"
             >
-              Visit Website
-              <ExternalLink size={16} />
+              Register Now
             </a>
           </div>
         </div>

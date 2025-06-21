@@ -1,12 +1,22 @@
 import { Check } from "lucide-react";
 
+interface PricingTierProps {
+  title: string;
+  priceINR: string;
+  priceUSD: string;
+  features: string[];
+  recommended?: boolean;
+  onRegister: () => void;
+}
+
 const PricingTier = ({
   title,
-  price,
+  priceINR,
+  priceUSD,
   features,
   recommended = false,
   onRegister,
-}) => {
+}: PricingTierProps) => {
   return (
     <div
       className={`bg-white rounded-2xl shadow-lg overflow-hidden border ${
@@ -23,14 +33,21 @@ const PricingTier = ({
         <h3 className="text-xl font-bold text-gray-800 mb-4">{title}</h3>
 
         <div className="mb-8">
-          <p className="text-3xl font-bold text-gray-800">
-            ${price}
-            <span className="text-sm font-normal text-gray-500"></span>
+          <p className="text-3xl font-bold text-gray-800 mb-1">
+            ₹{priceINR}
+            <span className="text-sm font-normal text-gray-500"> + GST</span>
+          </p>
+          <p className="text-lg font-medium text-gray-700">
+            ${priceUSD}
+            <span className="text-sm font-normal text-gray-500">
+              {" "}
+              USD (incl. GST)
+            </span>
           </p>
         </div>
 
         <ul className="space-y-3 mb-8">
-          {features.map((feature, index) => (
+          {features.map((feature: string, index: number) => (
             <li key={index} className="flex items-start gap-2">
               <div className="mt-1 text-green-500">
                 <Check size={16} />
@@ -55,7 +72,11 @@ const PricingTier = ({
   );
 };
 
-const Registration = ({ onRegister }) => {
+interface RegistrationProps {
+  onRegister: () => void;
+}
+
+const Registration = ({ onRegister }: RegistrationProps) => {
   const commonFeatures = [
     "Access to all sessions",
     "Summit welcome kit",
@@ -67,7 +88,8 @@ const Registration = ({ onRegister }) => {
   const pricingTiers = [
     {
       title: "IEEE WIE Member",
-      price: "120",
+      priceINR: "10,000",
+      priceUSD: "140",
       features: [
         ...commonFeatures,
         "2 days accommodation",
@@ -78,7 +100,8 @@ const Registration = ({ onRegister }) => {
     },
     {
       title: "IEEE Member",
-      price: "150",
+      priceINR: "12,500",
+      priceUSD: "175",
       features: [
         ...commonFeatures,
         "2 days accommodation",
@@ -88,7 +111,8 @@ const Registration = ({ onRegister }) => {
     },
     {
       title: "Non-IEEE Member",
-      price: "180",
+      priceINR: "15,000",
+      priceUSD: "210",
       features: [
         ...commonFeatures,
         "2 days accommodation",
@@ -126,7 +150,8 @@ const Registration = ({ onRegister }) => {
             <PricingTier
               key={index}
               title={tier.title}
-              price={tier.price}
+              priceINR={tier.priceINR}
+              priceUSD={tier.priceUSD}
               features={tier.features}
               recommended={tier.recommended}
               onRegister={onRegister}

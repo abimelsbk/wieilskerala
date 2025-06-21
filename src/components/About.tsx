@@ -1,4 +1,4 @@
-import { Sparkles, MapPin } from "lucide-react";
+import { Sparkles, MapPin, Globe, Users, Award } from "lucide-react";
 
 const About = () => {
   return (
@@ -12,6 +12,189 @@ const About = () => {
       <div className="absolute bottom-20 left-0 w-96 h-96 rounded-full bg-indigo-200 opacity-20 blur-3xl"></div>
 
       <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 flex items-center justify-center gap-3">
+            <Sparkles className="text-purple-600" size={28} />
+            <span>About Us</span>
+          </h2>
+          <p className="max-w-3xl mx-auto text-gray-600">
+            Learn more about the organizations behind WIE ILS 2025 and our
+            mission to empower women in engineering and leadership.
+          </p>
+        </div>
+
+        {/* Organization blocks */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          {/* IEEE Block */}
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-transform duration-300 hover:-translate-y-2">
+            <div className="h-2 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
+            <div className="p-5 flex flex-col h-full">
+              <div className="flex items-center">
+                <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center mr-3 shrink-0">
+                  <Globe className="text-blue-600" size={20} />
+                </div>
+                <h3 className="text-lg font-bold text-gray-800 leading-tight">
+                  IEEE
+                </h3>
+              </div>
+
+              <div className="flex-grow mt-4 flex flex-col">
+                <div className="bg-blue-50 p-3 rounded-lg mb-4 flex-grow">
+                  <h4 className="font-medium text-sm text-blue-800 mb-2">
+                    About IEEE
+                  </h4>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    The Institute of Electrical and Electronics Engineers (IEEE)
+                    is the world's largest technical professional organization
+                    dedicated to advancing technology for the benefit of
+                    humanity.
+                  </p>
+                  <div className="mt-3 border-t border-blue-100 pt-3">
+                    <div className="flex items-center mb-1.5">
+                      <div className="min-w-[26px] h-[26px] rounded-full bg-blue-100 flex items-center justify-center mr-2 px-2">
+                        <span className="text-blue-600 text-xs font-bold">
+                          400K+
+                        </span>
+                      </div>
+                      <p className="text-xs text-gray-600">Members worldwide</p>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="min-w-[26px] h-[26px] rounded-full bg-blue-100 flex items-center justify-center mr-2 px-2">
+                        <span className="text-blue-600 text-xs font-bold">
+                          160+
+                        </span>
+                      </div>
+                      <p className="text-xs text-gray-600">
+                        Countries represented
+                      </p>
+                    </div>
+                  </div>{" "}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* IEEE Kerala Section Block */}
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-transform duration-300 hover:-translate-y-2">
+            <div className="h-2 bg-gradient-to-r from-purple-500 to-indigo-600"></div>
+            <div className="p-5 flex flex-col h-full">
+              <div className="flex items-center">
+                <div className="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center mr-3 shrink-0">
+                  <Users className="text-purple-600" size={20} />
+                </div>
+                <h3 className="text-lg font-bold text-gray-800 leading-tight">
+                  IEEE Kerala Section
+                </h3>
+              </div>
+
+              <div className="flex-grow mt-4 flex flex-col">
+                <div className="bg-purple-50 p-3 rounded-lg mb-4 flex-grow">
+                  <h4 className="font-medium text-sm text-purple-800 mb-2">
+                    About Kerala Section
+                  </h4>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    Established in 1983, IEEE Kerala Section is one of the most
+                    active sections in the IEEE India Council, at the forefront
+                    of technological advancements and professional development.
+                  </p>
+
+                  <div className="mt-3 border-t border-purple-100 pt-3">
+                    <div className="flex items-center mb-1.5">
+                      <div className="min-w-[26px] h-[26px] rounded-full bg-purple-100 flex items-center justify-center mr-2 px-2">
+                        <span className="text-purple-600 text-xs font-bold">
+                          15K+
+                        </span>
+                      </div>
+                      <p className="text-xs text-gray-600">Active members</p>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="min-w-[26px] h-[26px] rounded-full bg-purple-100 flex items-center justify-center mr-2 px-2">
+                        <span className="text-purple-600 text-xs font-bold">
+                          40+
+                        </span>
+                      </div>
+                      <p className="text-xs text-gray-600">
+                        Years of excellence
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* IEEE WIE Block */}
+          <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-full flex flex-col transition-transform duration-300 hover:-translate-y-2">
+            <div className="h-2 bg-gradient-to-r from-pink-500 to-purple-600"></div>
+            <div className="p-5 flex flex-col h-full">
+              <div className="flex items-center">
+                <div className="w-10 h-10 rounded-full bg-pink-100 flex items-center justify-center mr-3 shrink-0">
+                  <Award className="text-pink-600" size={20} />
+                </div>
+                <h3 className="text-lg font-bold text-gray-800 leading-tight">
+                  IEEE WIE & IEEE WIE Kerala Section
+                </h3>
+              </div>
+
+              <div className="flex-grow mt-4 flex flex-col">
+                <div className="bg-pink-50 p-3 rounded-lg mb-4 flex-grow">
+                  <h4 className="font-medium text-sm text-pink-800 mb-2">
+                    About IEEE WIE
+                  </h4>
+                  <p className="text-gray-600 text-xs leading-relaxed">
+                    IEEE Women in Engineering (WIE) is one of the world's
+                    largest professional organizations dedicated to advancing
+                    women in engineering and science with 1,000+ affinity groups
+                    across 100+ countries.
+                  </p>
+
+                  <div className="mt-3 border-t border-pink-100 pt-3">
+                    <div className="mb-3">
+                      <h5 className="font-medium text-xs text-pink-800 mb-1.5">
+                        IEEE WIE Kerala Section
+                      </h5>
+                      <div className="flex flex-wrap gap-2">
+                        <div className="flex items-center">
+                          <div className="min-w-[26px] h-[26px] rounded-full bg-pink-100 flex items-center justify-center mr-2 px-2">
+                            <span className="text-pink-600 text-xs font-bold">
+                              5.6K+
+                            </span>
+                          </div>
+                          <p className="text-xs text-gray-600">Members</p>
+                        </div>
+                        <div className="flex items-center">
+                          <div className="min-w-[26px] h-[26px] rounded-full bg-pink-100 flex items-center justify-center mr-2 px-2">
+                            <span className="text-pink-600 text-xs font-bold">
+                              1st
+                            </span>
+                          </div>
+                          <p className="text-xs text-gray-600">
+                            In Asia Pacific
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h5 className="font-medium text-xs text-pink-800 mb-1.5">
+                      Awards & Recognition
+                    </h5>
+                    <ul className="list-disc list-inside text-xs text-gray-700 pl-0.5 space-y-0.5">
+                      <li>
+                        Honorable Mention – IEEE WIE AG of the Year Award (2023)
+                      </li>
+                      <li>MGA WIE Affinity Group of the Year Award (2019)</li>
+                      <li>
+                        Region 10 WIE Section Affinity Group Award (2013 & 2019)
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Event information section */}
         <div className="flex flex-col md:flex-row gap-12 items-center">
           <div className="md:w-1/2">
             <div className="relative">
@@ -46,14 +229,6 @@ const About = () => {
               International Leadership Summit (WIE ILS) is coming to Kozhikode,
               and it's all about inclusive leadership, innovation, and equity in
               action.
-            </p>
-
-            <p className="text-gray-700 mb-8 leading-relaxed">
-              This summit brings together leaders committed to sustainable
-              growth, purposeful innovation, and nurturing communities that
-              thrive together. We believe in leadership that creates lasting
-              positive impact through collaboration, empathy, and
-              forward-thinking approaches.
             </p>
 
             <div className="bg-white p-6 rounded-xl shadow-md border border-purple-100">
