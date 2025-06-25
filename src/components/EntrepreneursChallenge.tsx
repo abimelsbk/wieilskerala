@@ -13,7 +13,7 @@ const EntrepreneursChallenge = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
-          <div className="lg:w-1/2">
+          <div className="lg:w-full">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-white/10 p-2 rounded-lg">
                 <Rocket className="h-6 w-6 text-purple-300" />
@@ -88,7 +88,7 @@ const EntrepreneursChallenge = () => {
             </div>
           </div>
 
-          <div className="lg:w-1/2">
+          {/* <div className="lg:w-1/2">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl opacity-75 blur"></div>
               <div className="relative bg-purple-900 p-6 sm:p-10 rounded-2xl border border-purple-700/50">
@@ -142,7 +142,7 @@ const EntrepreneursChallenge = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

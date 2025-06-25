@@ -34,22 +34,20 @@ const Speakers: React.FC = () => {
       name: "Pooja Ramesh",
       designation: "Carnatic Musician",
       imageUrl:
-        "/assets/speakers/WhatsApp Image 2025-06-22 at 06.50.12_9e115bca.jpg",
+        "/assets/speakers/Pooja.jpg",
     },
-    /* Commented out until photos are available
     {
       name: "Sabiha Marikar",
-      designation: "Tech Leader",
+      designation: "Senior Commander, Jet Airways",
       imageUrl:
-        "/assets/speakers/WhatsApp Image 2025-06-22 at 06.50.12_9e115bca.jpg",
+        "/assets/speakers/Sabiha.jpg",
     },
     {
       name: "Uthara Ramakrishnan",
-      designation: "Innovation Expert",
+      designation: "Certified Financial Planner",
       imageUrl:
-        "/assets/speakers/WhatsApp Image 2025-06-22 at 06.50.12_9e115bca.jpg",
+        "/assets/speakers/Uthara.png",
     },
-    */
   ];
 
   return (
@@ -72,7 +70,7 @@ const Speakers: React.FC = () => {
             expertise and perspectives to the WIE ILS Kerala 2025.
           </p>
         </div>{" "}
-        <div className="flex justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
           {speakers.map((speaker, index) => (
             <SpeakerCard
               key={index}

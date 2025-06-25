@@ -195,85 +195,156 @@ const About = () => {
         </div>
 
         {/* Event information section */}
-        <div className="flex flex-col md:flex-row gap-12 items-center">
-          <div className="md:w-1/2">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-purple-600 to-indigo-600 opacity-90 rounded-2xl transform rotate-3"></div>
-              <img
-                src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="Women in leadership"
-                className="relative rounded-2xl shadow-xl transform -rotate-3 transition-transform duration-500 hover:rotate-0 w-full"
-              />
-            </div>
-          </div>
+        <div className="bg-white rounded-3xl shadow-xl overflow-hidden mb-16">
+          <div className="relative">
+            {/* Background decorations */}
+            <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-r from-purple-600 to-indigo-600 clip-diagonal"></div>
+            <div className="absolute top-12 left-12 w-16 h-16 rounded-full bg-pink-400 opacity-20"></div>
+            <div className="absolute top-20 right-20 w-24 h-24 rounded-full border-4 border-indigo-300 opacity-20"></div>
+            <div className="absolute -bottom-8 -left-8 w-40 h-40 rounded-full bg-purple-200 opacity-10"></div>
 
-          <div className="md:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-800 flex items-center gap-3">
-              <Sparkles className="text-purple-600" size={28} />
-              <span>Welcome to WIE ILS 2025</span>
-            </h2>
-
-            <div className="bg-gradient-to-r from-purple-100 to-indigo-100 p-5 rounded-lg mb-6 border-l-4 border-purple-500">
-              <h3 className="text-xl font-semibold text-purple-800 mb-2">
-                Our Theme
-              </h3>
-              <p className="italic text-gray-700">
-                "Lead with Purpose: Nurturing &amp; Growing together towards a
-                Sustainable tomorrow"
-              </p>
-            </div>
-
-            <p className="text-gray-700 mb-6 leading-relaxed">
-              Join us for two unforgettable days of learning, connection, and
-              celebration of women in leadership. The IEEE Women in Engineering
-              International Leadership Summit (WIE ILS) is coming to Kozhikode,
-              and it's all about inclusive leadership, innovation, and equity in
-              action.
-            </p>
-
-            <div className="bg-white p-6 rounded-xl shadow-md border border-purple-100">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-purple-100 rounded-full text-purple-600">
-                  <MapPin size={20} />
+            <div className="p-10 pt-20 relative z-10">
+              {/* Header */}
+              <div className="text-center mb-12">
+                <div className="inline-flex items-center justify-center p-4 mb-4 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600">
+                  <Sparkles className="text-white" size={32} />
                 </div>
-                <div>
-                  <h3 className="font-semibold text-gray-800 mb-1">
-                    The Raviz Kadavu
+                <h2 className="text-3xl md:text-5xl font-bold mb-4 text-gray-800">
+                  Welcome to WIE ILS{" "}
+                  <span className="text-purple-600">2025</span>
+                </h2>
+                <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-indigo-400 mx-auto mb-4"></div>
+              </div>
+
+              {/* Theme Card */}
+              <div className="max-w-3xl mx-auto bg-gradient-to-r from-purple-100 to-indigo-100 p-8 rounded-xl mb-12 relative overflow-hidden shadow-lg">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-white opacity-10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <h3 className="text-2xl font-bold text-purple-800 mb-4 relative z-10">
+                  Our Theme
+                </h3>
+                <p className="text-xl italic text-gray-700 font-medium relative z-10">
+                  "Lead with Purpose: Nurturing &amp; Growing together towards a
+                  Sustainable tomorrow"
+                </p>
+                <div className="absolute bottom-0 left-0 w-20 h-20 bg-white opacity-10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+              </div>
+
+              {/* Content Grid */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                {/* Left Column */}
+                <div className="bg-purple-50 rounded-2xl p-6 shadow-md border border-purple-100">
+                  <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    <div className="p-2 rounded-lg bg-purple-100">
+                      <Sparkles className="h-5 w-5 text-purple-600" />
+                    </div>
+                    About the Summit
                   </h3>
-                  <p className="text-gray-600 text-sm">
-                    Nestled by the serene Chaliyar River in Kozhikode, Kerala,
-                    our venue offers the perfect blend of natural beauty and
-                    world-class facilities.
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    Join us for two unforgettable days of learning, connection,
+                    and celebration of women in leadership. The IEEE Women in
+                    Engineering International Leadership Summit (WIE ILS) is
+                    coming to Kozhikode, and it's all about inclusive
+                    leadership, innovation, and equity in action.
                   </p>
+
+                  <div className="flex items-center mt-4">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-purple-200 text-purple-700 font-bold mr-4">
+                      500+
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-800">
+                        Expected Attendees
+                      </h4>
+                      <p className="text-sm text-gray-600">
+                        Leaders and innovators from across the globe
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column - Venue */}
+                <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 shadow-md border border-purple-100">
+                  <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    <div className="p-2 rounded-lg bg-purple-100">
+                      <MapPin className="h-5 w-5 text-purple-600" />
+                    </div>
+                    Event Venue
+                  </h3>
+
+                  {/* Venue Image Gallery */}
+                  <div className="grid grid-cols-3 gap-2 mb-4 rounded-xl overflow-hidden">
+                    <div className="col-span-3">
+                      <img
+                        src="/assets/venue/pic1.webp"
+                        alt="The Raviz Kadavu"
+                        className="w-full h-40 object-cover rounded-t-xl"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="/assets/venue/pic2.webp"
+                        alt="Venue facilities"
+                        className="w-full h-24 object-cover"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="/assets/venue/pic3.webp"
+                        alt="Venue surroundings"
+                        className="w-full h-24 object-cover"
+                      />
+                    </div>
+                    <div>
+                      <img
+                        src="/assets/venue/2023-09-02.webp"
+                        alt="Venue view"
+                        className="w-full h-24 object-cover"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="bg-white rounded-xl p-6 shadow-sm">
+                    <h4 className="text-lg font-bold text-purple-700 mb-2">
+                      The Raviz Kadavu
+                    </h4>
+                    <p className="text-gray-700 mb-4">
+                      Nestled by the serene Chaliyar River in Kozhikode, Kerala,
+                      our venue offers the perfect blend of natural beauty and
+                      world-class facilities.
+                    </p>
+                    <div className="flex items-center gap-2 text-gray-600 text-sm">
+                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                      <span>Centrally located in Kozhikode</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-gray-600 text-sm mt-1">
+                      <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                      <span>State-of-the-art conference facilities</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="mt-8 flex items-center gap-3">
-              <div className="flex -space-x-2">
-                <img
-                  src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="Attendee"
-                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
-                />
-                <img
-                  src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="Attendee"
-                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
-                />
-                <img
-                  src="https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="Attendee"
-                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
-                />
+              {/* CTA Button */}
+              <div className="text-center mt-12">
+                <a
+                  href="#register"
+                  className="inline-block px-10 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full font-bold tracking-wide shadow-lg hover:shadow-purple-300/50 transition-all duration-300 transform hover:-translate-y-1"
+                >
+                  Reserve Your Spot Now
+                </a>
               </div>
-              <p className="text-sm text-gray-600 italic">
-                Join <span className="text-purple-600 font-medium">500+</span>{" "}
-                leaders and innovators
-              </p>
             </div>
           </div>
         </div>
+
+        {/* CSS for diagonal clip path */}
+        <style>
+          {`
+            .clip-diagonal {
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+            }
+          `}
+        </style>
       </div>
     </section>
   );

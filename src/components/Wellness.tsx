@@ -79,7 +79,7 @@ const Wellness = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-indigo-400 opacity-75 rounded-2xl transform rotate-3"></div>
               <img 
-                src="https://images.pexels.com/photos/4056535/pexels-photo-4056535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                src="/assets/2022/Pic 2.jpeg" 
                 alt="Yoga by the river" 
                 className="relative rounded-2xl shadow-xl transform -rotate-3 transition-transform duration-500 hover:rotate-0"
               />
