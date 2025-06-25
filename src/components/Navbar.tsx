@@ -25,6 +25,7 @@ const Navbar = () => {
     { title: "Challenge", href: "#challenge" },
     { title: "Wellness", href: "#wellness" },
     { title: "Legacy", href: "#legacy" },
+    { title: "Speakers", href: "#speakers" },
     { title: "Register", href: "#register" },
     { title: "Contact", href: "#contact" },
   ];

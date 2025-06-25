@@ -7,6 +7,7 @@ import Tracks from "./components/Tracks";
 import EntrepreneursChallenge from "./components/EntrepreneursChallenge";
 import Wellness from "./components/Wellness";
 import Legacy from "./components/Legacy";
+import Speakers from "./components/Speakers";
 import Registration from "./components/Registration";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -29,6 +30,7 @@ function App() {
       <EntrepreneursChallenge />
       <Wellness />
       <Legacy />
+      <Speakers />
       <Registration onRegister={() => setShowRegistrationForm(true)} />
       <Contact />
       <Footer />

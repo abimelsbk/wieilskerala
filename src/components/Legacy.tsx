@@ -1,11 +1,69 @@
-import React from "react";
-import { History, Calendar, MapPin } from "lucide-react";
+import React, { useState } from "react";
+import {
+  History,
+  Calendar,
+  MapPin,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react";
+
+const ImageCarousel = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const goToPrevious = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToNext = () => {
+    const isLastSlide = currentIndex === images.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  return (
+    <div className="relative w-full h-full">
+      <div
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full cursor-pointer z-10 shadow-md"
+        onClick={goToPrevious}
+      >
+        <ChevronLeft className="h-5 w-5 text-purple-600" />
+      </div>
+
+      <div
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full cursor-pointer z-10 shadow-md"
+        onClick={goToNext}
+      >
+        <ChevronRight className="h-5 w-5 text-purple-600" />
+      </div>
+
+      <img
+        src={images[currentIndex]}
+        alt={`Event photo ${currentIndex + 1}`}
+        className="w-full h-full object-cover rounded-xl shadow-lg transition-opacity duration-300"
+      />
+
+      <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
+        {images.map((_, index) => (
+          <div
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 rounded-full cursor-pointer ${
+              index === currentIndex ? "bg-purple-600" : "bg-white/70"
+            }`}
+          ></div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const LegacyEvent = ({
   year,
   location,
   description,
-  imageUrl,
+  images,
   isLeft = true,
 }) => {
   return (
@@ -14,28 +72,28 @@ const LegacyEvent = ({
         isLeft ? "md:flex-row" : "md:flex-row-reverse"
       } gap-6 md:gap-10 items-center mb-16`}
     >
-      <div className="md:w-2/5">
-        <div className="relative">
+      <div className="md:w-1/2 w-full h-[300px] md:h-[400px]">
+        <div className="relative h-full">
           <div
             className={`absolute inset-0 bg-gradient-to-r ${
               isLeft
                 ? "from-purple-400 to-indigo-400"
                 : "from-indigo-400 to-purple-400"
             } opacity-75 rounded-xl ${
-              isLeft ? "transform rotate-3" : "transform -rotate-3"
+              isLeft ? "transform rotate-2" : "transform -rotate-2"
             }`}
           ></div>
-          <img
-            src={imageUrl}
-            alt={`WIE ILS ${year}`}
-            className={`relative rounded-xl shadow-lg ${
-              isLeft ? "transform -rotate-3" : "transform rotate-3"
+          <div
+            className={`relative h-full ${
+              isLeft ? "transform -rotate-2" : "transform rotate-2"
             } transition-transform duration-500 hover:rotate-0`}
-          />
+          >
+            <ImageCarousel images={images} />
+          </div>
         </div>
       </div>
 
-      <div className="md:w-3/5">
+      <div className="md:w-1/2">
         <div className="flex items-center gap-3 mb-4">
           <div className="bg-purple-100 p-2 rounded-lg">
             <Calendar className="h-5 w-5 text-purple-600" />
@@ -57,6 +115,22 @@ const LegacyEvent = ({
 };
 
 const Legacy = () => {
+  // Define the image paths for 2018 and 2022 events
+  const images2018 = [
+    "/assets/2018/wie18-1.png",
+    "/assets/2018/wie18-2.png",
+    "/assets/2018/wie18-3.png",
+    "/assets/2018/wie18-4.png",
+  ];
+
+  const images2022 = [
+    "/assets/2022/Pic 2.jpeg",
+    "/assets/2022/Pic 9.jpeg",
+    "/assets/2022/Pic 13.jpeg",
+    "/assets/2022/Pic 18.jpeg",
+    "/assets/2022/Pic 39.jpeg",
+  ];
+
   return (
     <section id="legacy" className="py-24 bg-purple-50">
       <div className="container mx-auto px-6">
@@ -84,7 +158,7 @@ const Legacy = () => {
             year="2018"
             location="Kochi, Kerala"
             description="Featured speakers from DRDO, Cisco, and more — plus hands-on workshops and cultural showcases, even during the Kerala floods. Despite challenging circumstances, the inaugural summit brought together passionate leaders committed to advancing women in engineering."
-            imageUrl="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            images={images2018}
             isLeft={true}
           />
 
@@ -92,7 +166,7 @@ const Legacy = () => {
             year="2022"
             location="Trivandrum, Kerala"
             description="Celebrated 20 years of WIE Kerala with calligraphy, rooftop yoga, live bands, and a powerful lineup of changemakers. This milestone summit expanded our horizons with interdisciplinary sessions bridging technology, arts, and wellness, creating a holistic approach to leadership development."
-            imageUrl="https://images.pexels.com/photos/2962140/pexels-photo-2962140.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            images={images2022}
             isLeft={false}
           />
 
