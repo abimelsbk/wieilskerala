@@ -92,7 +92,7 @@ const Registration = ({ onRegister }: RegistrationProps) => {
       priceUSD: "140",
       features: [
         ...commonFeatures,
-        "2 days accommodation",
+        "Accomodation provided",
         "Priority workshop registration",
         "Exclusive WIE networking event",
       ],
@@ -104,7 +104,7 @@ const Registration = ({ onRegister }: RegistrationProps) => {
       priceUSD: "175",
       features: [
         ...commonFeatures,
-        "2 days accommodation",
+        "Accomodation provided",
         "Workshop registration",
       ],
       recommended: false,
@@ -115,7 +115,7 @@ const Registration = ({ onRegister }: RegistrationProps) => {
       priceUSD: "210",
       features: [
         ...commonFeatures,
-        "2 days accommodation",
+        "Accomodation provided",
         "Option to join IEEE & WIE",
       ],
       recommended: false,
@@ -177,7 +177,8 @@ const Registration = ({ onRegister }: RegistrationProps) => {
                   Contact for Group Rates
                 </a>
                 <a
-                  href="#"
+                  href="/assets/brochure.pdf"
+                  download
                   className="px-6 py-3 bg-white border border-purple-200 hover:bg-purple-50 text-purple-700 rounded-lg font-medium transition-colors duration-300 text-center"
                 >
                   Download Brochure

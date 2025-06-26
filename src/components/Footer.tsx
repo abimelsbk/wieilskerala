@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <footer className="bg-purple-900 text-white pt-16 pb-8">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
-          <div className="md:col-span-1">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+          <div>
             <h3 className="text-xl font-bold mb-6">WIE ILS 2025</h3>
             <p className="text-purple-200 mb-4 max-w-xs">
               IEEE Women in Engineering International Leadership Summit 2025,
@@ -130,67 +130,21 @@ const Footer = () => {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="text-purple-200 hover:text-white transition-colors duration-300"
-                >
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-purple-200 hover:text-white transition-colors duration-300"
-                >
-                  Accommodation
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-purple-200 hover:text-white transition-colors duration-300"
-                >
-                  Travel Info
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-purple-200 hover:text-white transition-colors duration-300"
-                >
-                  Sponsors
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-purple-200 hover:text-white transition-colors duration-300"
-                >
-                  Past Events
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2">
-              <li className="text-purple-200">Ms. Sarada Jayakrishnan</li>
-              <li className="text-purple-200">sarada.jk@ieee.org</li>
-              <li className="text-purple-200">+91 98460 12905</li>
-            </ul>
-            <a
-              href="https://WIEilskerala.org"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 text-purple-300 hover:text-white mt-4 transition-colors duration-300"
-            >
-              Visit Official Website
-              <ExternalLink size={14} />
-            </a>
+            <div className="space-y-3">
+              <div>
+                <p className="text-purple-200 font-medium">Prof. Deepa A K</p>
+                <p className="text-purple-200 text-sm">Organizing Chair</p>
+                <p className="text-purple-200 text-sm">deepaaksctce@ieee.org</p>
+                <p className="text-purple-200 text-sm">+91 94973 36411</p>
+              </div>
+              <div>
+                <p className="text-purple-200 font-medium">Dr. Bindima T</p>
+                <p className="text-purple-200 text-sm">Co-Organizing Chair</p>
+                <p className="text-purple-200 text-sm">bindima@ieee.org</p>
+                <p className="text-purple-200 text-sm">+91 94956 63242</p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -202,7 +156,7 @@ const Footer = () => {
           <p className="flex items-center justify-center gap-1 mt-4 text-sm text-purple-300">
             Made with
             <Heart size={14} className="text-pink-400" />
-            for women leaders in engineering
+            by IEEE Kerala Section Web Team
           </p>
         </div>
       </div>

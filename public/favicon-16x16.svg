@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+  <defs>
+    <linearGradient id="gradient16" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="8" cy="8" r="7.5" fill="url(#gradient16)" stroke="#ffffff" stroke-width="1"/>
+  
+  <!-- IEEE WIE text -->
+  <text x="8" y="6" font-family="Arial, sans-serif" font-size="3.5" font-weight="bold" text-anchor="middle" fill="white">IEEE</text>
+  <text x="8" y="11" font-family="Arial, sans-serif" font-size="3" font-weight="bold" text-anchor="middle" fill="white">WIE</text>
+  
+  <!-- Decorative elements -->
+  <circle cx="4" cy="4" r="0.5" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="12" cy="12" r="0.5" fill="rgba(255,255,255,0.3)"/>
+</svg>

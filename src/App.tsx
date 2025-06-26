@@ -12,6 +12,7 @@ import Registration from "./components/Registration";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import RegistrationForm from "./components/RegistrationForm";
+import EventVideos from "./components/EventVideos";
 
 function App() {
   const [showRegistrationForm, setShowRegistrationForm] = useState(false);
@@ -30,6 +31,7 @@ function App() {
       <EntrepreneursChallenge />
       <Wellness />
       <Legacy />
+      <EventVideos />
       <Speakers />
       <Registration onRegister={() => setShowRegistrationForm(true)} />
       <Contact />

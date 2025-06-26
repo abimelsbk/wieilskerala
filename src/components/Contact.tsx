@@ -50,16 +50,16 @@ const Contact = () => {
           <ContactCard
             icon={Mail}
             title="Email Us"
-            line1="Ms. Sarada Jayakrishnan (General Chair)"
-            line2="sarada.jk@ieee.org"
-            link={{ text: "Send Email", href: "mailto:sarada.jk@ieee.org" }}
+            line1="Prof. Deepa A K: deepaaksctce@ieee.org"
+            line2="Dr. Bindima T: bindima@ieee.org"
+            link={{ text: "Send Email", href: "mailto:deepaaksctce@ieee.org" }}
           />
 
           <ContactCard
             icon={Phone}
             title="Call Us"
-            line1="Ms. Sarada Jayakrishnan: +91 98460 12905"
-            line2="Dr. Elizabeth Rita Samuel: +91 94460 02490"
+            line1="Prof. Deepa A K: +91 94973 36411"
+            line2="Dr. Bindima T: +91 94956 63242"
           />
 
           <ContactCard
@@ -73,7 +73,7 @@ const Contact = () => {
 
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
           <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/2 p-6 md:p-10">
+            <div className="md:w-full p-6 md:p-10">
               <h3 className="text-2xl font-bold text-gray-800 mb-6">
                 Send Us a Message
               </h3>
@@ -149,7 +149,7 @@ const Contact = () => {
                 </button>
               </form>
             </div>
-
+{/* 
             <div className="md:w-1/2 bg-gradient-to-br from-purple-600 to-indigo-700 text-white p-6 md:p-10 flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl font-bold mb-6">Join Our Community</h3>
@@ -183,25 +183,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div>
-                <h4 className="font-medium mb-3">
-                  Subscribe to our newsletter
-                </h4>
-                <div className="flex">
-                  <input
-                    type="email"
-                    placeholder="Your email address"
-                    className="px-4 py-3 rounded-l-lg flex-grow focus:outline-none text-gray-800"
-                  />
-                  <button
-                    type="button"
-                    className="px-4 py-3 bg-purple-800 hover:bg-purple-900 rounded-r-lg transition-colors duration-300"
-                  >
-                    Subscribe
-                  </button>
-                </div>
-              </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
