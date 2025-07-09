@@ -205,7 +205,7 @@ const Registration = ({ onRegister }: RegistrationProps) => {
                       <Check size={16} />
                     </div>
                     <span className="text-gray-600">
-                      2 days of accommodation at The Raviz Kadavu
+                      Accommodation at The Raviz Kadavu
                     </span>
                   </li>
                   <li className="flex items-start gap-2">
