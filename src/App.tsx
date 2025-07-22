@@ -8,6 +8,7 @@ import EntrepreneursChallenge from "./components/EntrepreneursChallenge";
 import Wellness from "./components/Wellness";
 import Legacy from "./components/Legacy";
 import Speakers from "./components/Speakers";
+import Committee from "./components/Committee";
 import Registration from "./components/Registration";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -33,6 +34,7 @@ function App() {
       <Legacy />
       <EventVideos />
       <Speakers />
+      <Committee />
       <Registration onRegister={() => setShowRegistrationForm(true)} />
       <Contact />
       <Footer />
