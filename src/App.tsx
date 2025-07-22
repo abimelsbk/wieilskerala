@@ -9,6 +9,7 @@ import Wellness from "./components/Wellness";
 import Legacy from "./components/Legacy";
 import Speakers from "./components/Speakers";
 import Committee from "./components/Committee";
+import Sponsors from "./components/Sponsors";
 import Registration from "./components/Registration";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -35,6 +36,7 @@ function App() {
       <EventVideos />
       <Speakers />
       <Committee />
+      <Sponsors />
       <Registration onRegister={() => setShowRegistrationForm(true)} />
       <Contact />
       <Footer />

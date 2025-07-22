@@ -27,6 +27,7 @@ const Navbar = () => {
     { title: "Legacy", href: "#legacy" },
     { title: "Speakers", href: "#speakers" },
     { title: "Committee", href: "#committee" },
+    { title: "Sponsors", href: "#sponsors" },
     { title: "Register", href: "#register" },
     { title: "Contact", href: "#contact" },
   ];
