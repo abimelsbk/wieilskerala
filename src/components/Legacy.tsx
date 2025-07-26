@@ -143,7 +143,7 @@ const Legacy = () => {
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-            WIE ILS has been transforming lives since day one
+            WIE ILS TRANSFORMING LIVES
           </h2>
 
           <p className="text-gray-600 leading-relaxed">

@@ -44,7 +44,7 @@ const SponsorCard: React.FC<SponsorProps> = ({ name, imageUrl, website }) => {
 };
 
 const Sponsors: React.FC = () => {
-  // Sample sponsor data - replace with actual sponsors
+  // Sponsor data in specified order
   const sponsors: SponsorProps[] = [
     {
       name: "Women in Power",
@@ -82,7 +82,7 @@ const Sponsors: React.FC = () => {
 
         {hasSponsors ? (
           <div className="mb-16">
-            <div className="flex flex-wrap justify-center items-center gap-8 max-w-6xl mx-auto">
+            <div className="flex flex-wrap justify-center items-center gap-8 mx-auto">
               {sponsors.map((sponsor, index) => (
                 <SponsorCard
                   key={index}

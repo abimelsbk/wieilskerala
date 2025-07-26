@@ -50,6 +50,11 @@ const Speakers: React.FC = () => {
       designation: "Baul Musician",
       imageUrl: "/assets/speakers/Santhi.jpg",
     },
+    {
+      name: "Ms. Merin Joseph",
+      designation: "IPS Officer",
+      imageUrl: "/assets/speakers/Merin.jpg",
+    }
   ];
 
   return (
@@ -64,7 +69,7 @@ const Speakers: React.FC = () => {
           </div>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-            Learn from industry leaders and innovators
+            Learn from Industry Leaders and Innovators
           </h2>
 
           <p className="text-gray-600 leading-relaxed">
@@ -72,7 +77,7 @@ const Speakers: React.FC = () => {
             expertise and perspectives to the WIE ILS Kerala 2025.
           </p>
         </div>{" "}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
           {speakers.map((speaker, index) => (
             <SpeakerCard
               key={index}

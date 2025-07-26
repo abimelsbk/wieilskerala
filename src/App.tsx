@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
+import LogoCarousel from "./components/LogoCarousel";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import EventHighlights from "./components/EventHighlights";
@@ -26,20 +27,23 @@ function App() {
   return (
     <div className="font-sans text-gray-800">
       <Navbar />
-      <Hero />
-      <About />
-      <EventHighlights />
-      <Tracks />
-      <EntrepreneursChallenge />
-      <Wellness />
-      <Legacy />
-      <EventVideos />
-      <Speakers />
-      <Committee />
-      <Sponsors />
-      <Registration onRegister={() => setShowRegistrationForm(true)} />
-      <Contact />
-      <Footer />
+      <div className="">
+        <Hero />
+      <LogoCarousel />
+        <About />
+        <EventHighlights />
+        <Tracks />
+        <EntrepreneursChallenge />
+        <Wellness />
+        <Legacy />
+        <EventVideos />
+        <Speakers />
+        <Committee />
+        <Sponsors />
+        <Registration onRegister={() => setShowRegistrationForm(true)} />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -74,13 +74,13 @@ const CommitteeGroup: React.FC<CommitteeGroupProps> = ({
       <div className="max-w-5xl mx-auto">
         <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
           <div className="overflow-x-auto">
-            <table className="w-full">
+            <table className="w-full table-fixed">
               <thead className="bg-gray-50 border-b border-gray-200">
                 <tr>
-                  <th className="text-left py-4 px-6 font-semibold text-gray-800 text-lg">
+                  <th className="text-left py-4 px-6 font-semibold text-gray-800 text-lg w-2/5">
                     Name
                   </th>
-                  <th className="text-left py-4 px-6 font-semibold text-gray-800 text-lg">
+                  <th className="text-left py-4 px-6 font-semibold text-gray-800 text-lg w-3/5">
                     Position
                   </th>
                 </tr>
@@ -93,10 +93,10 @@ const CommitteeGroup: React.FC<CommitteeGroupProps> = ({
                       index === members.length - 1 ? "border-b-0" : ""
                     }`}
                   >
-                    <td className="py-4 px-6 font-medium text-gray-800">
+                    <td className="py-4 px-6 font-medium text-gray-800 align-top">
                       {member.name}
                     </td>
-                    <td className="py-4 px-6 text-gray-600">
+                    <td className="py-4 px-6 text-gray-600 align-top">
                       {member.position}
                     </td>
                   </tr>

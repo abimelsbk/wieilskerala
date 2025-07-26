@@ -15,7 +15,7 @@ const Footer = () => {
               Lead with Purpose: Nurturing &amp; Growing together towards a
               Sustainable tomorrow
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               <a
                 href="#"
                 className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300"
@@ -80,7 +80,7 @@ const Footer = () => {
                   ></path>
                 </svg>
               </a>
-            </div>
+            </div> */}
           </div>
 
           <div>
