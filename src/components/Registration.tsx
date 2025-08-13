@@ -92,7 +92,7 @@ const Registration = ({ onRegister }: RegistrationProps) => {
       priceUSD: "140",
       features: [
         ...commonFeatures,
-        "Accomodation provided",
+        "Shared Accomodation provided",
         "Priority workshop registration",
         "Exclusive WIE networking event",
       ],
@@ -104,7 +104,7 @@ const Registration = ({ onRegister }: RegistrationProps) => {
       priceUSD: "175",
       features: [
         ...commonFeatures,
-        "Accomodation provided",
+        "Shared Accomodation provided",
         "Workshop registration",
       ],
       recommended: false,
@@ -115,7 +115,7 @@ const Registration = ({ onRegister }: RegistrationProps) => {
       priceUSD: "210",
       features: [
         ...commonFeatures,
-        "Accomodation provided",
+        "Shared Accomodation provided",
         "Option to join IEEE & WIE",
       ],
       recommended: false,
