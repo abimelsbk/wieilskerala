@@ -54,6 +54,31 @@ const Speakers: React.FC = () => {
       name: "Ms. Merin Joseph",
       designation: "IPS Officer",
       imageUrl: "/assets/speakers/Merin.jpg",
+    },
+    {
+      name: "Adv. Sujaya Sudhakaran",
+      designation: "Assistant Public Prosecutor",
+      imageUrl: "/assets/speakers/Sujaya.jpg",
+    },
+    {
+      name: "Mrs. Geetha Saleesh",
+      designation: "Entrepreneur",
+      imageUrl: "/assets/speakers/Geetha.jpg",
+    },
+    {
+      name: "Mrs. Anjali Menon",
+      designation: "Film Director",
+      imageUrl: "/assets/speakers/Anjali.jpg",
+    },
+    {
+      name: "Mrs. Raghasree D Nair",
+      designation: "Wing Commander",
+      imageUrl: "/assets/speakers/Raghasree.jpg",
+    },
+    {
+      name: "Dr. Muhammed Hasil M",
+      designation: "Orthopedic and Robotics Surgeon",
+      imageUrl: "/assets/speakers/Hasil.jpg",
     }
   ];
 

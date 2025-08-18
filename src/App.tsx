@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Navbar from "./components/Navbar";
 import LogoCarousel from "./components/LogoCarousel";
 import Hero from "./components/Hero";
@@ -14,22 +13,15 @@ import Sponsors from "./components/Sponsors";
 import Registration from "./components/Registration";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import RegistrationForm from "./components/RegistrationForm";
 import EventVideos from "./components/EventVideos";
 
 function App() {
-  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
-
-  if (showRegistrationForm) {
-    return <RegistrationForm />;
-  }
-
   return (
     <div className="font-sans text-gray-800">
       <Navbar />
       <div className="">
         <Hero />
-      <LogoCarousel />
+        <LogoCarousel />
         <About />
         <EventHighlights />
         <Tracks />
@@ -40,7 +32,7 @@ function App() {
         <Speakers />
         <Committee />
         <Sponsors />
-        <Registration onRegister={() => setShowRegistrationForm(true)} />
+        <Registration />
         <Contact />
         <Footer />
       </div>

@@ -50,6 +50,10 @@ const Sponsors: React.FC = () => {
       name: "Women in Power",
       imageUrl: "/assets/sponsors/logo_pes-wip.webp",
     },
+    {
+      name: "Indian Women Network",
+      imageUrl: "/assets/sponsors/iwn_logo.jpg",
+    }
   ];
 
   // Show placeholder content if no sponsors are added yet

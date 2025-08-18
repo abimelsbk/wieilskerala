@@ -6,7 +6,7 @@ interface PricingTierProps {
   priceUSD: string;
   features: string[];
   recommended?: boolean;
-  onRegister: () => void;
+  registrationLink: string;
 }
 
 const PricingTier = ({
@@ -15,7 +15,7 @@ const PricingTier = ({
   priceUSD,
   features,
   recommended = false,
-  onRegister,
+  registrationLink,
 }: PricingTierProps) => {
   return (
     <div
@@ -57,26 +57,24 @@ const PricingTier = ({
           ))}
         </ul>
 
-        <button
-          onClick={onRegister}
-          className={`w-full text-center py-3 px-6 rounded-lg font-medium transition-colors duration-300 ${
+        <a
+          href={registrationLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`block w-full text-center py-3 px-6 rounded-lg font-medium transition-colors duration-300 ${
             recommended
               ? "bg-purple-600 hover:bg-purple-700 text-white"
               : "bg-purple-100 hover:bg-purple-200 text-purple-700"
           }`}
         >
           Register Now
-        </button>
+        </a>
       </div>
     </div>
   );
 };
 
-interface RegistrationProps {
-  onRegister: () => void;
-}
-
-const Registration = ({ onRegister }: RegistrationProps) => {
+const Registration = () => {
   const commonFeatures = [
     "Access to all sessions",
     "Summit welcome kit",
@@ -97,6 +95,7 @@ const Registration = ({ onRegister }: RegistrationProps) => {
         "Accomodation on shared basis",
       ],
       recommended: true,
+      registrationLink: "https://forms.gle/Wu9BGXEEcrNoxq28A",
     },
     {
       title: "IEEE Member",
@@ -108,6 +107,7 @@ const Registration = ({ onRegister }: RegistrationProps) => {
         "Accomodation on shared basis",
       ],
       recommended: false,
+      registrationLink: "https://forms.gle/sqR58Y7tBpwrP2Te8",
     },
     {
       title: "Non-IEEE Member",
@@ -117,9 +117,9 @@ const Registration = ({ onRegister }: RegistrationProps) => {
         ...commonFeatures,
         "Option to join IEEE & WIE",
         "Accomodation on shared basis",
-        
       ],
       recommended: false,
+      registrationLink: "https://forms.gle/hVqa3D59qPiUtFjj6",
     },
   ];
 
@@ -155,7 +155,7 @@ const Registration = ({ onRegister }: RegistrationProps) => {
               priceUSD={tier.priceUSD}
               features={tier.features}
               recommended={tier.recommended}
-              onRegister={onRegister}
+              registrationLink={tier.registrationLink}
             />
           ))}
         </div>
