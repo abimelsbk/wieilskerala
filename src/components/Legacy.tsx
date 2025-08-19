@@ -124,7 +124,6 @@ const Legacy = () => {
   ];
 
   const images2022 = [
-    "/assets/2022/Pic 2.jpeg",
     "/assets/2022/Pic 9.jpeg",
     "/assets/2022/Pic 13.jpeg",
     "/assets/2022/Pic 18.jpeg",

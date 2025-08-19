@@ -37,7 +37,7 @@ const Speakers: React.FC = () => {
     },
     {
       name: "Sabiha Marikar",
-      designation: "Senior Commander, Jet Airways",
+      designation: "Senior Commander, Air India",
       imageUrl: "/assets/speakers/Sabiha.jpg",
     },
     {
@@ -79,8 +79,13 @@ const Speakers: React.FC = () => {
       name: "Dr. Muhammed Hasil M",
       designation: "Orthopedic and Robotics Surgeon",
       imageUrl: "/assets/speakers/Hasil.jpg",
-    }
+    },
   ];
+
+  // Sort speakers in ascending order by their name
+  const sortedSpeakers = [...speakers].sort((a, b) =>
+    a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+  );
 
   return (
     <section id="speakers" className="py-24 bg-white">
@@ -103,7 +108,7 @@ const Speakers: React.FC = () => {
           </p>
         </div>{" "}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
-          {speakers.map((speaker, index) => (
+          {sortedSpeakers.map((speaker, index) => (
             <SpeakerCard
               key={index}
               name={speaker.name}
