@@ -178,7 +178,7 @@ const Committee: React.FC = () => {
   // General Chair
   const generalChair = [
     {
-      name: "Ms Sarada Jayakrishnan",
+      name: "Sarada Jayakrishnan",
       position: "Past Chair, IEEE Kerala Section",
     },
   ];
@@ -230,7 +230,7 @@ const Committee: React.FC = () => {
   // Sponsorship Committee
   const sponsorshipCommittee = [
     {
-      name: "Mr. Varghese Cherian",
+      name: "Varghese Cherian",
       position: "Technology Services Head at UST Global",
     },
     {
@@ -238,7 +238,7 @@ const Committee: React.FC = () => {
       position: "Vice Chair, Kochi Subsection",
     },
     {
-      name: "Mr. Shone Jose",
+      name: "Shone Jose",
       position: "Chair IEEE Sensors Council Kerala Section",
     },
     {
@@ -250,7 +250,7 @@ const Committee: React.FC = () => {
   // Finance Committee
   const financeCommittee = [
     {
-      name: "Ms. Jyothi Ramaswamy",
+      name: "Jyothi Ramaswamy",
       position: "Vice Chair, WIE AG, IEEE Kerala Section",
     },
     {
@@ -270,7 +270,7 @@ const Committee: React.FC = () => {
   // Website Committee
   const websiteCommittee = [
     {
-      name: "Ms. Aisha Nazia",
+      name: "Aisha Nazia",
       position: "Past Secretary, WIE AG Kerala Section",
     },
   ];
