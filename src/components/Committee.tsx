@@ -155,6 +155,16 @@ const Committee: React.FC = () => {
       position: "Past Chair, IEEE Kerala Section",
       imageUrl: "/assets/Advisory Committee/Kasim.jpeg",
     },
+    {
+      name: "Sasi P M",
+      position: "Past chair IEEE Kerala section, Former CEO IT Parks",
+      imageUrl: "/assets/Advisory Committee/sasi.jpg"
+    },
+    {
+      name: "Satish Babu",
+      position: "Past chair IEEE Kerala Section, Founding Director ICFOSS, President InApp Infotech",
+      imageUrl: "/assets/Advisory Committee/satish.jpg"
+    },
     // 8. Past WIE AG Kerala Section Chair
     {
       name: "Dr Lillykutty Jacob",

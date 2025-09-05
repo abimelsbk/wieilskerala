@@ -31,6 +31,16 @@ const Speakers: React.FC = () => {
   // Speaker data
   const speakers = [
     {
+      name: "Dr. Divya S Iyer IAS",
+      designation: "District Collector",
+      imageUrl: "/assets/speakers/Divya_s.jpg",
+    },
+    {
+      name: "Bincy Baby",
+      designation: "Sustainability Professional",
+      imageUrl: "/assets/speakers/Bincy.jpg",
+    },
+    {
       name: "Pooja Ramesh",
       designation: "Musician",
       imageUrl: "/assets/speakers/Pooja.jpg",
@@ -84,13 +94,18 @@ const Speakers: React.FC = () => {
       name: "Divya Thaikkoottathil",
       designation: "CoFounder & Ex CTO - Zwayam; Founder Wynd Technologies",
       imageUrl: "/assets/speakers/Divya.jpg",
-    }
+    },
   ];
 
-  // Sort speakers in ascending order by their name
-  const sortedSpeakers = [...speakers].sort((a, b) =>
-    a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
-  );
+  // Custom sort: 'Dr. Divya S Iyer IAS' first, rest alphabetically
+  const sortedSpeakers = [
+    ...speakers.filter((s) => s.name === "Dr. Divya S Iyer IAS"),
+    ...speakers
+      .filter((s) => s.name !== "Dr. Divya S Iyer IAS")
+      .sort((a, b) =>
+        a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+      ),
+  ];
 
   return (
     <section id="speakers" className="py-24 bg-white">
