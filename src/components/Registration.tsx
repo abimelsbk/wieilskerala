@@ -35,7 +35,7 @@ const PricingTier = ({
         <div className="mb-8">
           <p className="text-3xl font-bold text-gray-800 mb-1">
             ₹{priceINR}
-            <span className="text-sm font-normal text-gray-500"> + GST</span>
+            <span className="text-sm font-normal text-gray-500">  (incl. GST)</span>
           </p>
           <p className="text-lg font-medium text-gray-700">
             ${priceUSD}
@@ -86,7 +86,7 @@ const Registration = () => {
   const pricingTiers = [
     {
       title: "IEEE WIE Member",
-      priceINR: "10,000",
+      priceINR: "11,800",
       priceUSD: "140",
       features: [
         ...commonFeatures,
@@ -99,7 +99,7 @@ const Registration = () => {
     },
     {
       title: "IEEE Member",
-      priceINR: "12,500",
+      priceINR: "14,750",
       priceUSD: "175",
       features: [
         ...commonFeatures,
@@ -111,7 +111,7 @@ const Registration = () => {
     },
     {
       title: "Non-IEEE Member",
-      priceINR: "15,000",
+      priceINR: "17,700",
       priceUSD: "210",
       features: [
         ...commonFeatures,
