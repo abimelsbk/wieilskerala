@@ -31,13 +31,23 @@ const Speakers: React.FC = () => {
   // Speaker data
   const speakers = [
     {
+      name: "Dr. Divya S Iyer IAS",
+      designation: "District Collector",
+      imageUrl: "/assets/speakers/Divya_s.jpg",
+    },
+    {
+      name: "Bincy Baby",
+      designation: "Sustainability Professional",
+      imageUrl: "/assets/speakers/Bincy.jpg",
+    },
+    {
       name: "Pooja Ramesh",
       designation: "Musician",
       imageUrl: "/assets/speakers/Pooja.jpg",
     },
     {
       name: "Sabiha Marikar",
-      designation: "Senior Commander, Jet Airways",
+      designation: "Senior Commander, Air India",
       imageUrl: "/assets/speakers/Sabiha.jpg",
     },
     {
@@ -51,8 +61,8 @@ const Speakers: React.FC = () => {
       imageUrl: "/assets/speakers/Santhi.jpg",
     },
     {
-      name: "Ms. Merin Joseph",
-      designation: "IPS Officer",
+      name: "Merin Joseph, IPS",
+      designation: "Superintendent of Police",
       imageUrl: "/assets/speakers/Merin.jpg",
     },
     {
@@ -61,25 +71,40 @@ const Speakers: React.FC = () => {
       imageUrl: "/assets/speakers/Sujaya.jpg",
     },
     {
-      name: "Mrs. Geetha Saleesh",
+      name: "Geetha Saleesh",
       designation: "Entrepreneur",
       imageUrl: "/assets/speakers/Geetha.jpg",
     },
     {
-      name: "Mrs. Anjali Menon",
+      name: "Anjali Menon",
       designation: "Film Director",
       imageUrl: "/assets/speakers/Anjali.jpg",
     },
     {
-      name: "Mrs. Raghasree D Nair",
-      designation: "Wing Commander",
+      name: "Raghasree D Nair",
+      designation: "Retd. Wing Commander",
       imageUrl: "/assets/speakers/Raghasree.jpg",
     },
     {
       name: "Dr. Muhammed Hasil M",
       designation: "Orthopedic and Robotics Surgeon",
       imageUrl: "/assets/speakers/Hasil.jpg",
-    }
+    },
+    {
+      name: "Divya Thaikkoottathil",
+      designation: "CoFounder & Ex CTO - Zwayam; Founder Wynd Technologies",
+      imageUrl: "/assets/speakers/Divya.jpg",
+    },
+  ];
+
+  // Custom sort: 'Dr. Divya S Iyer IAS' first, rest alphabetically
+  const sortedSpeakers = [
+    ...speakers.filter((s) => s.name === "Dr. Divya S Iyer IAS"),
+    ...speakers
+      .filter((s) => s.name !== "Dr. Divya S Iyer IAS")
+      .sort((a, b) =>
+        a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+      ),
   ];
 
   return (
@@ -103,7 +128,7 @@ const Speakers: React.FC = () => {
           </p>
         </div>{" "}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
-          {speakers.map((speaker, index) => (
+          {sortedSpeakers.map((speaker, index) => (
             <SpeakerCard
               key={index}
               name={speaker.name}

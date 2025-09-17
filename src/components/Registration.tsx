@@ -94,7 +94,7 @@ const Registration = () => {
         "Exclusive WIE networking event",
         "Accomodation on shared basis",
       ],
-      recommended: true,
+      recommended: false,
       registrationLink: "https://forms.gle/Wu9BGXEEcrNoxq28A",
     },
     {

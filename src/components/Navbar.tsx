@@ -35,6 +35,7 @@ const Navbar = () => {
       href: "#program",
       dropdown: [
         { title: "Highlights", href: "#highlights" },
+        { title: "Pre-Events", href: "#pre-events" },
         { title: "Tracks", href: "#tracks" },
         { title: "Challenge", href: "#challenge" },
         { title: "Wellness", href: "#wellness" },

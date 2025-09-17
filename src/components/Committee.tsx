@@ -113,51 +113,71 @@ const CommitteeGroup: React.FC<CommitteeGroupProps> = ({
 const Committee: React.FC = () => {
   // Advisory Committee data
   const advisoryCommittee = [
+    // 1. WIE Global Chair
     {
       name: "Dr Winnie Ye",
       position: "Chair, IEEE Women in Engineering",
       imageUrl: "/assets/Advisory Committee/Winnie.jpg",
     },
+    // 2. R10 WIE Chair
     {
-      name: "Dr K R Suresh Nair",
-      position: "Past Chair, IEEE India Council",
-      imageUrl: "/assets/Advisory Committee/Suresh.jpg",
+      name: "Dr Agnes Irwanti",
+      position: "Chair, IEEE R10 WIE Committee (2024)",
+      imageUrl: "/assets/Advisory Committee/Agnes.png",
     },
+    // 3. R10 Director Elect
     {
       name: "Dr Sameer S M",
       position: "Director Elect Region 10 (Asia Pacific)",
       imageUrl: "/assets/Advisory Committee/Sameer.jpg",
     },
+    // 4. India Council Chair
+    {
+      name: "Prof Prerna Gaur",
+      position: "Chair, IEEE India Council",
+      imageUrl: "/assets/Advisory Committee/Prerna.jpg",
+    },
+    // 5. India Council Past Chair
+    {
+      name: "Dr K R Suresh Nair",
+      position: "Past Chair, IEEE India Council",
+      imageUrl: "/assets/Advisory Committee/Suresh.jpg",
+    },
+    // 6. Kerala Section Chair
+    {
+      name: "Dr B S Manoj",
+      position: "Chair, IEEE Kerala Section",
+      imageUrl: "/assets/Advisory Committee/Manoj.jpg",
+    },
+    // 7. Kerala Section Past Chair
     {
       name: "Prof Muhammed Kasim",
       position: "Past Chair, IEEE Kerala Section",
       imageUrl: "/assets/Advisory Committee/Kasim.jpeg",
     },
     {
-      name: "Dr B S Manoj",
-      position: "Chair, IEEE Kerala Section",
-      imageUrl: "/assets/Advisory Committee/Manoj.jpg",
+      name: "Sasi P M",
+      position: "Past chair IEEE Kerala section, Former CEO IT Parks",
+      imageUrl: "/assets/Advisory Committee/sasi.jpg"
     },
+    {
+      name: "Satish Babu",
+      position: "Past chair IEEE Kerala Section, Founding Director ICFOSS, President InApp Infotech",
+      imageUrl: "/assets/Advisory Committee/satish.jpg"
+    },
+    // 8. Past WIE AG Kerala Section Chair
     {
       name: "Dr Lillykutty Jacob",
       position: "Past Chair WIE AG, IEEE Kerala Section",
       imageUrl: "/assets/Advisory Committee/Lillykutty.png",
     },
-    {
-      name: "Prof Prerna Gaur",
-      position: "Chair, IEEE India Council",
-      imageUrl: "/assets/Advisory Committee/Prerna.jpg",
-    },
-    {
-      name: "Dr Agnes Irwanti",
-      position: "Chair, IEEE R10 WIE Committee (2024)",
-      imageUrl: "/assets/Advisory Committee/Agnes.png",
-    },
+    // 9. WIE ILS Sub Committee Chair
     {
       name: "Sadhana Attavar",
       position: "Chair, IEEE WIE ILS Sub Committee",
       imageUrl: "/assets/Advisory Committee/Sadhana.jpg",
     },
+    // 10. Region 10 Coordinator WIE
     {
       name: "Warunika Hippola",
       position: "Region 10 Coordinator, IEEE WIE",
@@ -168,8 +188,8 @@ const Committee: React.FC = () => {
   // General Chair
   const generalChair = [
     {
-      name: "Ms Sarada Jayakrishnan",
-      position: "Past Chair IEEE Kerala Section",
+      name: "Sarada Jayakrishnan",
+      position: "Past Chair, IEEE Kerala Section",
     },
   ];
 
@@ -177,7 +197,7 @@ const Committee: React.FC = () => {
   const organisingChairs = [
     {
       name: "Prof Deepa A K",
-      position: "Chair, WIE AG, IEEE Kerala Section",
+      position: "Chair, WIE AG IEEE Kerala Section",
     },
     {
       name: "Dr Bindima T",
@@ -193,7 +213,7 @@ const Committee: React.FC = () => {
   const steeringCommittee = [
     {
       name: "Dr Mini Ulanat",
-      position: "Past Chair IEEE Kerala Section",
+      position: "Past Chair, IEEE Kerala Section",
     },
   ];
 
@@ -220,15 +240,15 @@ const Committee: React.FC = () => {
   // Sponsorship Committee
   const sponsorshipCommittee = [
     {
-      name: "Mr. Varghese Cherian",
+      name: "Varghese Cherian",
       position: "Technology Services Head at UST Global",
     },
     {
       name: "Dr. Bijoy A Jose",
-      position: "Vice Chair Kochi Subsection",
+      position: "Vice Chair, Kochi Subsection",
     },
     {
-      name: "Mr. Shone Jose",
+      name: "Shone Jose",
       position: "Chair IEEE Sensors Council Kerala Section",
     },
     {
@@ -240,7 +260,7 @@ const Committee: React.FC = () => {
   // Finance Committee
   const financeCommittee = [
     {
-      name: "Ms. Jyothi Ramaswamy",
+      name: "Jyothi Ramaswamy",
       position: "Vice Chair, WIE AG, IEEE Kerala Section",
     },
     {
@@ -260,8 +280,8 @@ const Committee: React.FC = () => {
   // Website Committee
   const websiteCommittee = [
     {
-      name: "Ms. Aisha Nazia",
-      position: "Past Secretary of WIE AG Kerala Section",
+      name: "Aisha Nazia",
+      position: "Past Secretary, WIE AG Kerala Section",
     },
   ];
 

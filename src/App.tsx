@@ -14,6 +14,7 @@ import Registration from "./components/Registration";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import EventVideos from "./components/EventVideos";
+import PreEvents from "./components/PreEvents";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Hero />
         <LogoCarousel />
         <About />
+        <PreEvents />
         <EventHighlights />
         <Tracks />
         <EntrepreneursChallenge />
