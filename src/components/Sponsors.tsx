@@ -53,7 +53,23 @@ const Sponsors: React.FC = () => {
     {
       name: "Indian Women Network",
       imageUrl: "/assets/sponsors/iwn_logo.jpg",
+    },
+    {
+      name: "WiSe - IEEE Sensors Council",
+      imageUrl: "/assets/sponsors/wise.png",
+    },
+    {
+      name: "IEEE Professional Communication Society",
+      imageUrl: "/assets/sponsors/procomm.webp",
     }
+  ];
+
+  // Event Resource Partner data
+  const resourcePartners: SponsorProps[] = [
+    {
+      name: "Event Resource Partner: CMA",
+      imageUrl: "/assets/sponsors/cma.jpg",
+    },
   ];
 
   // Show placeholder content if no sponsors are added yet
@@ -130,6 +146,28 @@ const Sponsors: React.FC = () => {
             </div>
           </div>
         )}
+
+        {/* Event Resource Partner Section */}
+        <div className="mt-20">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-800 mb-2">
+              Event Resource Partner
+            </h3>
+            <p className="text-gray-600">
+              Special thanks to our event resource partner for their support.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-8 mx-auto">
+            {resourcePartners.map((partner, idx) => (
+              <SponsorCard
+                key={idx}
+                name={partner.name}
+                imageUrl={partner.imageUrl}
+                website={partner.website}
+              />
+            ))}
+          </div>
+        </div>
 
         {/* Call to Action for Potential Sponsors */}
         <div className="mt-16 text-center">

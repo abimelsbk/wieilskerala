@@ -81,7 +81,7 @@ const Speakers: React.FC = () => {
       imageUrl: "/assets/speakers/Anjali.jpg",
     },
     {
-      name: "Raghasree D Nair",
+      name: "Wg Cdr Rajshree D Nair",
       designation: "Retd. Wing Commander",
       imageUrl: "/assets/speakers/Raghasree.jpg",
     },
@@ -95,6 +95,26 @@ const Speakers: React.FC = () => {
       designation: "CoFounder & Ex CTO - Zwayam; Founder Wynd Technologies",
       imageUrl: "/assets/speakers/Divya.jpg",
     },
+    {
+      name: "Shakshi Dhanekar",
+      designation: "Sensors Council WiSe Committee member",
+      imageUrl: "/assets/speakers/Shakshi.webp",
+    },
+    {
+      name: "Dr. A Seema",
+      designation: "Scientist",
+      imageUrl: "/assets/speakers/Seema.png"
+    },
+    {
+      name: "Anju J D",
+      designation: "Cyber Security Manager, EY",
+      imageUrl: "/assets/speakers/Anju.jpg"
+    },
+    {
+      name: "Smitha Balakrishnan",
+      designation: "Assistant General Manager, TCS",
+      imageUrl: "/assets/speakers/Smitha.jpg"
+    }
   ];
 
   // Custom sort: 'Dr. Divya S Iyer IAS' first, rest alphabetically
