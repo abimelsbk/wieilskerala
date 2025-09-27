@@ -31,11 +31,6 @@ const Speakers: React.FC = () => {
   // Speaker data
   const speakers = [
     {
-      name: "Dr. Divya S Iyer IAS",
-      designation: "District Collector",
-      imageUrl: "/assets/speakers/Divya_s.jpg",
-    },
-    {
       name: "Bincy Baby",
       designation: "Sustainability Professional",
       imageUrl: "/assets/speakers/Bincy.jpg",
