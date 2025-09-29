@@ -109,6 +109,11 @@ const Speakers: React.FC = () => {
       name: "Smitha Balakrishnan",
       designation: "Assistant General Manager, TCS",
       imageUrl: "/assets/speakers/Smitha.jpg"
+    },
+    {
+      name: "Sangeeta Singh",
+      designation: "Chair, IEEE Sensors Council Chapter, IEEE Hyderabad Section",
+      imageUrl: "/assets/speakers/sangeetha.jpeg"
     }
   ];
 
