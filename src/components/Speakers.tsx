@@ -114,6 +114,11 @@ const Speakers: React.FC = () => {
       name: "Sangeeta Singh",
       designation: "Chair, IEEE Sensors Council Chapter, IEEE Hyderabad Section",
       imageUrl: "/assets/speakers/sangeetha.jpeg"
+    },
+    {
+      name: "Shankar J",
+      designation: "TEDx-Ready Speaker & BCI/AI Educator",
+      imageUrl: "/assets/speakers/sankar.png"
     }
   ];
 

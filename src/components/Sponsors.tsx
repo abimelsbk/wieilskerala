@@ -73,6 +73,14 @@ const Sponsors: React.FC = () => {
     {
       name: "IEEE Kerala Section Strategic Initiatives on Industry Management",
       imageUrl: "/assets/sponsors/siee.jpg",
+    },
+    {
+      name: "IEEE Robotics and Automation Society",
+      imageUrl: "/assets/sponsors/RAS.png",
+    },
+    {
+      name: "IEEE Young Professionals",
+      imageUrl: "/assets/sponsors/yp.jpg",
     }
   ];
 
