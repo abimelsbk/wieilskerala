@@ -35,7 +35,10 @@ const PricingTier = ({
         <div className="mb-8">
           <p className="text-3xl font-bold text-gray-800 mb-1">
             ₹{priceINR}
-            <span className="text-sm font-normal text-gray-500">  (incl. GST)</span>
+            <span className="text-sm font-normal text-gray-500">
+              {" "}
+              (incl. GST)
+            </span>
           </p>
           <p className="text-lg font-medium text-gray-700">
             ${priceUSD}
@@ -235,6 +238,86 @@ const Registration = () => {
                   </li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl shadow-lg p-6 md:p-10 mt-8 border-l-4 border-purple-500">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">
+              Special Accommodation Options
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-4xl mx-auto">
+              <div className="bg-white rounded-xl p-6 shadow-md border-2 border-purple-200 hover:border-purple-400 transition-colors duration-300">
+                <div className="text-purple-600 mb-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-12 w-12 mx-auto"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                    />
+                  </svg>
+                </div>
+                <h4 className="text-xl font-bold text-gray-800 mb-3">
+                  Single Occupancy Room
+                </h4>
+                <p className="text-gray-600 text-sm">
+                  Prefer your own private room? Get exclusive single occupancy
+                  accommodation at The Raviz Kadavu.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 shadow-md border-2 border-purple-200 hover:border-purple-400 transition-colors duration-300">
+                <div className="text-purple-600 mb-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-12 w-12 mx-auto"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                  </svg>
+                </div>
+                <h4 className="text-xl font-bold text-gray-800 mb-3">
+                  No Accommodation Required
+                </h4>
+                <p className="text-gray-600 text-sm">
+                  Local participant or have your own arrangements? Get
+                  summit-only pricing without accommodation.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="mailto:deepaaksctce@ieee.org?subject=Special Accommodation Request - IEEE WIE ILS 2025&body=Hello,%0A%0AI would like to inquire about:%0A%0A☐ Single occupancy room%0A☐ No accommodation required%0A%0APlease provide me with the pricing details and availability.%0A%0AThank you!"
+                className="px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-bold text-lg transition-colors duration-300 text-center inline-flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                Contact Us for Custom Pricing
+              </a>
             </div>
           </div>
         </div>

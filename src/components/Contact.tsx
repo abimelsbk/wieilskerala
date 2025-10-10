@@ -71,7 +71,7 @@ const Contact = () => {
           />
         </div>
 
-        <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+        {/* <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
           <div className="flex flex-col md:flex-row">
             <div className="md:w-full p-6 md:p-10">
               <h3 className="text-2xl font-bold text-gray-800 mb-6">
@@ -149,7 +149,7 @@ const Contact = () => {
                 </button>
               </form>
             </div>
-{/* 
+
             <div className="md:w-1/2 bg-gradient-to-br from-purple-600 to-indigo-700 text-white p-6 md:p-10 flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl font-bold mb-6">Join Our Community</h3>
@@ -183,9 +183,9 @@ const Contact = () => {
                 </div>
               </div>
 
-            </div> */}
+            </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
