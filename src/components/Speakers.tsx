@@ -77,7 +77,7 @@ const Speakers: React.FC = () => {
     },
     {
       name: "Wg Cdr Ragashree D Nair",
-      designation: "Retd. Wing Commander",
+      designation: "Co-Chair & Group CEO, Medicaid Ethos Private Limited",
       imageUrl: "/assets/speakers/Raghasree.jpg",
     },
     {
