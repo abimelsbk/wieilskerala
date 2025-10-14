@@ -76,7 +76,7 @@ const Speakers: React.FC = () => {
       imageUrl: "/assets/speakers/Anjali.jpg",
     },
     {
-      name: "Wg Cdr Rajshree D Nair",
+      name: "Wg Cdr Ragashree D Nair",
       designation: "Retd. Wing Commander",
       imageUrl: "/assets/speakers/Raghasree.jpg",
     },
@@ -119,6 +119,21 @@ const Speakers: React.FC = () => {
       name: "Shankar J",
       designation: "TEDx-Ready Speaker & BCI/AI Educator",
       imageUrl: "/assets/speakers/sankar.png"
+    },
+    {
+      name: "Meena Nair",
+      designation: "VP Operations and Head, Learning & Development, Director Webyfy IOT Pvt Ltd",
+      imageUrl: "/assets/speakers/Meena.jpg"
+    },
+    {
+      name: "Dr. Meena Dasan",
+      designation: "Scientist F, DRDO",
+      imageUrl: "/assets/speakers/Meena_dasan.jpg"
+    },
+    {
+      name: "Vidhu Vincent",
+      designation: "Film Director and Writer",
+      imageUrl: "/assets/speakers/Vidhu.jpg"
     }
   ];
 
