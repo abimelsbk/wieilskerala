@@ -117,7 +117,7 @@ const Speakers: React.FC = () => {
     },
     {
       name: "Shankar J",
-      designation: "TEDx-Ready Speaker & BCI/AI Educator",
+      designation: "PhD Scholar, NIT Calicut",
       imageUrl: "/assets/speakers/sankar.png"
     },
     {
