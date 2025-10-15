@@ -32,7 +32,7 @@ const Speakers: React.FC = () => {
   const speakers = [
     {
       name: "Bincy Baby",
-      designation: "Sustainability Professional",
+      designation: "Founder, Itzserene",
       imageUrl: "/assets/speakers/Bincy.jpg",
     },
     {
