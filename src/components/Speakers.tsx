@@ -134,7 +134,12 @@ const Speakers: React.FC = () => {
       name: "Vidhu Vincent",
       designation: "Film Director and Writer",
       imageUrl: "/assets/speakers/Vidhu.jpg"
-    }
+    }, 
+    {
+      name: "Ramalatha", 
+      designation: "Director, iExplore Foundation, Past Global IEEE WiE Chair", 
+      imageUrl: "/assets/speakers/Ramalatha.jpg"
+   } 
   ];
 
   // Custom sort: 'Dr. Divya S Iyer IAS' first, rest alphabetically
