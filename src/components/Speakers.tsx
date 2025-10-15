@@ -92,7 +92,7 @@ const Speakers: React.FC = () => {
     },
     {
       name: "Shakshi Dhanekar",
-      designation: "Sensors Council WiSe Committee member",
+      designation: "Associate Professor, Dept of Electrical Engg, IIT Jodhpur and Director, Co-Founder, Sensekriti Tech Sol Pvt Ltd.", 
       imageUrl: "/assets/speakers/Shakshi.webp",
     },
     {
