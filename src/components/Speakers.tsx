@@ -112,7 +112,7 @@ const Speakers: React.FC = () => {
     },
     {
       name: "Sangeeta Singh",
-      designation: "Chair, IEEE Sensors Council Chapter, IEEE Hyderabad Section",
+      designation: "Member, Women in Sensors (WiSe) Committee, IEEE Sensors Council",
       imageUrl: "/assets/speakers/sangeetha.jpeg"
     },
     {
