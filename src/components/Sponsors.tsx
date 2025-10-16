@@ -97,6 +97,10 @@ const Sponsors: React.FC = () => {
     {
       name: "Kiora Amorez",
       imageUrl: "/assets/sponsors/kiora.png",
+    },
+    {
+      name: "KMCT Group of Institutions",
+      imageUrl: "/assets/sponsors/kmct.png",
     }
   ];
 
@@ -129,7 +133,7 @@ const Sponsors: React.FC = () => {
         </div>
 
 {/* Event Support Partners Section */}
-        <div className="mt-20">
+        <div className="my-20">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-800 mb-2">
               Event Support Partners

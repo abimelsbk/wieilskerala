@@ -127,7 +127,7 @@ const Speakers: React.FC = () => {
     },
     {
       name: "Dr. Meena Dasan",
-      designation: "Scientist F, DRDO",
+      designation: "Scientist G, Electronics and Radar Development Establishment, LRDE, DRDO",
       imageUrl: "/assets/speakers/Meena_dasan.jpg"
     },
     {
@@ -139,7 +139,22 @@ const Speakers: React.FC = () => {
       name: "Ramalatha", 
       designation: "Director, iExplore Foundation, Past Global IEEE WiE Chair", 
       imageUrl: "/assets/speakers/Ramalatha.jpg"
-   } 
+    },
+    {
+      name: "Arundhathi Krishna",
+      designation: "Head of Community and Partnerships, TinkerHub",
+      imageUrl: "/assets/speakers/Arundhathi.jpg"
+    },
+    {
+      name: "Dr. Harivardhagini Subhadra",
+      designation: "Events Coordinator - IEEE PES WiP, Voting member - 2025 WIE Committee",
+      imageUrl: "/assets/speakers/Harivardhagini.jpg"
+    },
+    {
+      name: "Fajeena Kareem",
+      designation: "CoFounder and CEO Kiora Amorez",
+      imageUrl: "/assets/speakers/Fajeena.jpg"
+    }
   ];
 
   // Custom sort: 'Dr. Divya S Iyer IAS' first, rest alphabetically
