@@ -81,6 +81,10 @@ const Sponsors: React.FC = () => {
     {
       name: "IEEE Young Professionals",
       imageUrl: "/assets/sponsors/yp.jpg",
+    },
+    {
+      name: "IEEE Microwave Theory & Technology Society",
+      imageUrl: "/assets/sponsors/mtts.jpg",
     }
   ];
 
