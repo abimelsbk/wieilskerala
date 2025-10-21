@@ -28,6 +28,22 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
 };
 
 const Speakers: React.FC = () => {
+
+  // Inauguration speakers
+  const inaugurationSpeakers = [
+    {
+      name: "Dr. Divya S Iyer IAS",
+      designation: "District Collector, Pathanamthitta",
+      imageUrl: "/assets/speakers/Divya.jpg",
+    },
+    {
+      name: "Dr. P P Shajahan",
+      designation: "Chairman, IEEE Kerala Section",
+      imageUrl: "/assets/speakers/Shajahan.jpg",
+    },
+  ];
+
+
   // Speaker data
   const speakers = [
     {
@@ -162,7 +178,7 @@ const Speakers: React.FC = () => {
     }
   ];
 
-  // Custom sort: 'Dr. Divya S Iyer IAS' first, rest alphabetically
+   // Custom sort: 'Dr. Divya S Iyer IAS' first, rest alphabetically
   const sortedSpeakers = [
     ...speakers.filter((s) => s.name === "Dr. Divya S Iyer IAS"),
     ...speakers
@@ -191,7 +207,26 @@ const Speakers: React.FC = () => {
             Get inspired by our distinguished speakers who bring diverse
             expertise and perspectives to the WIE ILS Kerala 2025.
           </p>
-        </div>{" "}
+        </div>
+
+        {/* Inauguration Speakers Section */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-semibold text-center text-purple-700 mb-10">
+            Inauguration Speakers
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-3xl mx-auto">
+            {inaugurationSpeakers.map((speaker, index) => (
+              <SpeakerCard
+                key={index}
+                name={speaker.name}
+                designation={speaker.designation}
+                imageUrl={speaker.imageUrl}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* All Other Speakers */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
           {sortedSpeakers.map((speaker, index) => (
             <SpeakerCard
