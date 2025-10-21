@@ -154,6 +154,11 @@ const Speakers: React.FC = () => {
       name: "Fajeena Kareem",
       designation: "CoFounder and CEO Kiora Amorez",
       imageUrl: "/assets/speakers/Fajeena.jpg"
+    },
+     {
+      name: "Dr Bindu Sivasankaran Nair",
+      designation: "Growth consultant and Inclusion Enthusiast",
+      imageUrl: "/assets/speakers/DrBindu.jpg"
     }
   ];
 
