@@ -21,28 +21,21 @@ const SpeakerCard: React.FC<SpeakerCardProps> = ({
           className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
         />
       </div>
-      <h3 className="font-bold text-xl text-gray-800">{name}</h3>
-      <p className="text-purple-600">{designation}</p>
+      <h3 className="font-bold text-xl text-gray-800 text-center">{name}</h3>
+      <p className="text-purple-600 text-center">{designation}</p>
     </div>
   );
 };
 
 const Speakers: React.FC = () => {
-
   // Inauguration speakers
   const inaugurationSpeakers = [
     {
-      name: "Dr. Divya S Iyer IAS",
-      designation: "District Collector, Pathanamthitta",
-      imageUrl: "/assets/speakers/Divya.jpg",
-    },
-    {
-      name: "Dr. P P Shajahan",
-      designation: "Chairman, IEEE Kerala Section",
-      imageUrl: "/assets/speakers/Shajahan.jpg",
+      name: "Hon. Mayor Beena Philip",
+      designation: "Kozhikode Municipal Corporation",
+      imageUrl: "/assets/speakers/Beena.jpg",
     },
   ];
-
 
   // Speaker data
   const speakers = [
@@ -93,7 +86,8 @@ const Speakers: React.FC = () => {
     },
     {
       name: "Wg Cdr Ragashree D Nair",
-      designation: "Co-Chair & Group CEO, Medicaid Ethos Private Limited",
+      designation:
+        "Co-Chair & Group CEO, Medicaid Ethos Private Limited",
       imageUrl: "/assets/speakers/Raghasree.jpg",
     },
     {
@@ -103,90 +97,92 @@ const Speakers: React.FC = () => {
     },
     {
       name: "Divya Thaikkoottathil",
-      designation: "CoFounder & Ex CTO - Zwayam; Founder Wynd Technologies",
+      designation:
+        "CoFounder & Ex CTO - Zwayam; Founder Wynd Technologies",
       imageUrl: "/assets/speakers/Divya.jpg",
     },
     {
       name: "Dr. Saakshi Dhanekar",
-      designation: "Associate Professor, Dept of Electrical Engg, IIT Jodhpur and Director, Co-Founder, Sensekriti Tech Sol Pvt Ltd.", 
+      designation:
+        "Associate Professor, Dept of Electrical Engg, IIT Jodhpur and Director, Co-Founder, Sensekriti Tech Sol Pvt Ltd.",
       imageUrl: "/assets/speakers/Shakshi.webp",
     },
     {
       name: "Dr. A Seema",
       designation: "Scientist",
-      imageUrl: "/assets/speakers/Seema.png"
+      imageUrl: "/assets/speakers/Seema.png",
     },
     {
       name: "Anju J D",
       designation: "Cyber Security Manager, EY",
-      imageUrl: "/assets/speakers/Anju.jpg"
+      imageUrl: "/assets/speakers/Anju.jpg",
     },
     {
       name: "Smitha Balakrishnan",
       designation: "Assistant General Manager, TCS",
-      imageUrl: "/assets/speakers/Smitha.jpg"
+      imageUrl: "/assets/speakers/Smitha.jpg",
     },
     {
       name: "Dr. Sangeeta Singh",
-      designation: "Member, Women in Sensors (WiSe) Committee, IEEE Sensors Council",
-      imageUrl: "/assets/speakers/sangeetha.jpeg"
+      designation:
+        "Member, Women in Sensors (WiSe) Committee, IEEE Sensors Council",
+      imageUrl: "/assets/speakers/sangeetha.jpeg",
     },
     {
       name: "Shankar J",
       designation: "PhD Scholar, NIT Calicut",
-      imageUrl: "/assets/speakers/sankar.png"
+      imageUrl: "/assets/speakers/sankar.png",
     },
     {
       name: "Meena Nair",
-      designation: "VP Operations and Head, Learning & Development, Director Webyfy IOT Pvt Ltd",
-      imageUrl: "/assets/speakers/Meena.jpg"
+      designation:
+        "VP Operations and Head, Learning & Development, Director Webyfy IOT Pvt Ltd",
+      imageUrl: "/assets/speakers/Meena.jpg",
     },
     {
       name: "Dr. Meena Dasan",
-      designation: "Scientist G, Electronics and Radar Development Establishment, LRDE, DRDO",
-      imageUrl: "/assets/speakers/Meena_dasan.jpg"
+      designation:
+        "Scientist G, Electronics and Radar Development Establishment, LRDE, DRDO",
+      imageUrl: "/assets/speakers/Meena_dasan.jpg",
     },
     {
       name: "Vidhu Vincent",
       designation: "Film Director and Writer",
-      imageUrl: "/assets/speakers/Vidhu.jpg"
-    }, 
+      imageUrl: "/assets/speakers/Vidhu.jpg",
+    },
     {
-      name: "Ramalatha Marimuthu", 
-      designation: "Director, iExplore Foundation, Past Global IEEE WiE Chair", 
-      imageUrl: "/assets/speakers/Ramalatha.jpg"
+      name: "Ramalatha Marimuthu",
+      designation:
+        "Director, iExplore Foundation, Past Global IEEE WiE Chair",
+      imageUrl: "/assets/speakers/Ramalatha.jpg",
     },
     {
       name: "Arundhathi Krishna",
       designation: "Head of Community and Partnerships, TinkerHub",
-      imageUrl: "/assets/speakers/Arundhathi.jpg"
+      imageUrl: "/assets/speakers/Arundhathi.jpg",
     },
     {
       name: "Dr. Harivardhagini Subhadra",
-      designation: "Events Coordinator - IEEE PES WiP, Voting member - 2025 WIE Committee",
-      imageUrl: "/assets/speakers/Harivardhagini.jpg"
+      designation:
+        "Events Coordinator - IEEE PES WiP, Voting member - 2025 WIE Committee",
+      imageUrl: "/assets/speakers/Harivardhagini.jpg",
     },
     {
       name: "Fajeena Kareem",
       designation: "CoFounder and CEO Kiora Amorez",
-      imageUrl: "/assets/speakers/Fajeena.jpg"
+      imageUrl: "/assets/speakers/Fajeena.jpg",
     },
-     {
+    {
       name: "Dr Bindu Sivasankaran Nair",
       designation: "Growth consultant and Inclusion Enthusiast",
-      imageUrl: "/assets/speakers/DrBindu.jpg"
-    }
+      imageUrl: "/assets/speakers/DrBindu.jpg",
+    },
   ];
 
-   // Custom sort: 'Dr. Divya S Iyer IAS' first, rest alphabetically
-  const sortedSpeakers = [
-    ...speakers.filter((s) => s.name === "Dr. Divya S Iyer IAS"),
-    ...speakers
-      .filter((s) => s.name !== "Dr. Divya S Iyer IAS")
-      .sort((a, b) =>
-        a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
-      ),
-  ];
+  // Sort speakers alphabetically
+  const sortedSpeakers = speakers.sort((a, b) =>
+    a.name.localeCompare(b.name, undefined, { sensitivity: "base" })
+  );
 
   return (
     <section id="speakers" className="py-24 bg-white">
@@ -210,9 +206,9 @@ const Speakers: React.FC = () => {
         </div>
 
         {/* Inauguration Speakers Section */}
-        <div className="mb-20">
+        <div className="mb-20 bg-purple-50 py-10 rounded-2xl shadow-md">
           <h3 className="text-2xl font-semibold text-center text-purple-700 mb-10">
-            Inauguration Speakers
+            Inauguration Speaker
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-3xl mx-auto">
             {inaugurationSpeakers.map((speaker, index) => (
