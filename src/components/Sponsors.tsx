@@ -104,7 +104,7 @@ const Sponsors: React.FC = () => {
   const supportPartners: SponsorProps[] = [
     {
       name: "Kiora Amorez",
-      imageUrl: "/assets/sponsors/redfm.jpg",
+      imageUrl: "/assets/sponsors/kiora.png",
     },
     
   ];
@@ -114,7 +114,7 @@ const Sponsors: React.FC = () => {
   const publicityPartners: SponsorProps[] = [
     {
       name: "Red FM",
-      imageUrl: "/assets/sponsors/kiora.png",
+      imageUrl: "/assets/sponsors/redfm.jpg",
     },
     
   ];
