@@ -182,6 +182,16 @@ const Speakers: React.FC = () => {
       designation: "Author and Film Maker",
       imageUrl: "/assets/speakers/Sreebala.jpg",
     },
+    {
+      name: "Dr. John George",
+      designation: "Dean College of Engineering Adoor",
+      imageUrl: "/assets/speakers/DrJohn.jpg",
+    },
+    {
+      name: "Amritha Sasi",
+      designation: "Assistant Executive Engineer, KSEBL ",
+      imageUrl: "/assets/speakers/Amritha.jpg",
+    },
   ];
 
   // Sort speakers alphabetically
