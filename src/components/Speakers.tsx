@@ -91,7 +91,7 @@ const Speakers: React.FC = () => {
       imageUrl: "/assets/speakers/Divya.jpg",
     },
     {
-      name: "Shakshi Dhanekar",
+      name: "Dr. Saakshi Dhanekar",
       designation: "Associate Professor, Dept of Electrical Engg, IIT Jodhpur and Director, Co-Founder, Sensekriti Tech Sol Pvt Ltd.", 
       imageUrl: "/assets/speakers/Shakshi.webp",
     },
@@ -111,7 +111,7 @@ const Speakers: React.FC = () => {
       imageUrl: "/assets/speakers/Smitha.jpg"
     },
     {
-      name: "Sangeeta Singh",
+      name: "Dr. Sangeeta Singh",
       designation: "Member, Women in Sensors (WiSe) Committee, IEEE Sensors Council",
       imageUrl: "/assets/speakers/sangeetha.jpeg"
     },
