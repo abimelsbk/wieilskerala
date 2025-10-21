@@ -69,7 +69,7 @@ const Navbar = () => {
                 <img
                   src="/assets/sponsors/wieils.jpg"
                   alt="WIE ILS Logo"
-                  className="h-12"
+                  className="h-16"
                 />
                 <div className="hidden md:flex items-center gap-6">
                   <img
