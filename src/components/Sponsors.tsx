@@ -104,6 +104,16 @@ const Sponsors: React.FC = () => {
   const supportPartners: SponsorProps[] = [
     {
       name: "Kiora Amorez",
+      imageUrl: "/assets/sponsors/redfm.jpg",
+    },
+    
+  ];
+
+
+    // Event publicity Partners data
+  const publicityPartners: SponsorProps[] = [
+    {
+      name: "Red FM",
       imageUrl: "/assets/sponsors/kiora.png",
     },
     
@@ -228,6 +238,33 @@ const Sponsors: React.FC = () => {
             ))}
           </div>
         </div>
+
+
+
+         {/* Event Publicity Partner Section */}
+        <div className="mt-20">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-gray-800 mb-2">
+              Publicity Partner
+            </h3>
+            <p className="text-gray-600">
+              Special thanks to our event resource partner for their support.
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-8 mx-auto">
+            {publicityPartners.map((partner, idx) => (
+              <SponsorCard
+                key={idx}
+                name={partner.name}
+                imageUrl={partner.imageUrl}
+                website={partner.website}
+              />
+            ))}
+          </div>
+        </div>
+
+
+
 
         {/* Call to Action for Potential Sponsors */}
         <div className="mt-16 text-center">
