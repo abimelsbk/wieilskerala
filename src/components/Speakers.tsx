@@ -136,7 +136,7 @@ const Speakers: React.FC = () => {
       imageUrl: "/assets/speakers/Vidhu.jpg"
     }, 
     {
-      name: "Ramalatha", 
+      name: "Ramalatha Marimuthu", 
       designation: "Director, iExplore Foundation, Past Global IEEE WiE Chair", 
       imageUrl: "/assets/speakers/Ramalatha.jpg"
     },

@@ -47,6 +47,10 @@ const Sponsors: React.FC = () => {
   // Sponsor data in specified order
   const sponsors: SponsorProps[] = [
     {
+      name: "KMCT Group of Institutions",
+      imageUrl: "/assets/sponsors/kmct.png",
+    },
+    {
       name: "Women in Power",
       imageUrl: "/assets/sponsors/logo_pes-wip.webp",
     },
@@ -102,10 +106,7 @@ const Sponsors: React.FC = () => {
       name: "Kiora Amorez",
       imageUrl: "/assets/sponsors/kiora.png",
     },
-    {
-      name: "KMCT Group of Institutions",
-      imageUrl: "/assets/sponsors/kmct.png",
-    }
+    
   ];
 
   // Show placeholder content if no sponsors are added yet
