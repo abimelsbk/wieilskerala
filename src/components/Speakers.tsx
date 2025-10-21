@@ -177,6 +177,11 @@ const Speakers: React.FC = () => {
       designation: "Growth consultant and Inclusion Enthusiast",
       imageUrl: "/assets/speakers/DrBindu.jpg",
     },
+    {
+      name: "Sreebala K Menon",
+      designation: "Author and Film Maker",
+      imageUrl: "/assets/speakers/Sreebala.jpg",
+    },
   ];
 
   // Sort speakers alphabetically
