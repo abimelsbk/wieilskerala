@@ -164,7 +164,7 @@ const Footer = () => {
           <p className="flex items-center justify-center gap-1 mt-4 text-sm text-purple-300">
             Made with
             <Heart size={14} className="text-pink-400" />
-            by IEEE Kerala Section Web Team
+            by IEEE Kerala Section Web Coordination Team
           </p>
         </div>
       </div>
