@@ -1,5 +1,5 @@
 import React from "react";
-import { Heart } from "lucide-react";
+import { Heart, X } from "lucide-react";
 
 interface SponsorProps {
   name: string;
@@ -85,7 +85,7 @@ const Sponsors: React.FC = () => {
     {
       name: "IEEE Microwave Theory & Technology Society",
       imageUrl: "/assets/sponsors/mtts.jpg",
-    }
+    },
   ];
 
   // Event Resource Partner data
@@ -105,11 +105,27 @@ const Sponsors: React.FC = () => {
     {
       name: "KMCT Group of Institutions",
       imageUrl: "/assets/sponsors/kmct.png",
-    }
+    },
   ];
+
+  // Advertisements from sponsors (images only)
+  // To add more ads, drop images into `public/assets/advertisement/` and add the filenames here
+  const advertisements: string[] = ["/assets/advertisement/ad1.jpg"];
 
   // Show placeholder content if no sponsors are added yet
   const hasSponsors = sponsors.length > 0;
+
+  // Lightbox for advertisements
+  const [lightboxSrc, setLightboxSrc] = React.useState<string | null>(null);
+  React.useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightboxSrc(null);
+    };
+    if (lightboxSrc) {
+      window.addEventListener("keydown", onKey);
+    }
+    return () => window.removeEventListener("keydown", onKey);
+  }, [lightboxSrc]);
 
   return (
     <section
@@ -136,7 +152,7 @@ const Sponsors: React.FC = () => {
           </p>
         </div>
 
-{/* Event Support Partners Section */}
+        {/* Event Support Partners Section */}
         <div className="my-20">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-800 mb-2">
@@ -157,7 +173,6 @@ const Sponsors: React.FC = () => {
             ))}
           </div>
         </div>
-        
 
         {hasSponsors ? (
           <div className="mb-16">
@@ -202,6 +217,74 @@ const Sponsors: React.FC = () => {
                   Download Sponsorship Info
                 </a>
               </div>
+            </div>
+          </div>
+        )}
+
+        {/* A Word from our sponsors - Advertisements (images only) */}
+        {advertisements.length > 0 && (
+          <div className="mt-8 md:mt-12">
+            <div className="text-center mb-6 md:mb-8">
+              <h3 className="text-2xl font-bold text-gray-800">
+                A Word from our sponsors
+              </h3>
+              <div className="mt-2 h-1 w-24 bg-gradient-to-r from-purple-500 to-indigo-600 rounded mx-auto"></div>
+            </div>
+            <div className="flex justify-center items-center gap-8">
+              {advertisements.map((src, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => setLightboxSrc(src)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      setLightboxSrc(src);
+                    }
+                  }}
+                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 overflow-hidden text-left focus:outline-none focus:ring-2 focus:ring-purple-500"
+                >
+                  <div className="w-full h-72 md:h-96 flex items-center justify-center bg-gray-50 cursor-zoom-in">
+                    <img
+                      src={src}
+                      alt="Sponsor advertisement"
+                      loading="lazy"
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {lightboxSrc && (
+          <div
+            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+            onClick={() => setLightboxSrc(null)}
+            role="dialog"
+            aria-modal="true"
+          >
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setLightboxSrc(null);
+              }}
+              className="absolute top-4 right-4 md:top-6 md:right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white focus:outline-none focus:ring-2 focus:ring-white"
+              aria-label="Close"
+            >
+              <X className="h-6 w-6" />
+            </button>
+            <div
+              className="max-w-[95vw] max-h-[90vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={lightboxSrc}
+                alt="Sponsor advertisement full size"
+                className="w-auto h-auto max-w-[95vw] max-h-[90vh] object-contain cursor-zoom-out"
+              />
             </div>
           </div>
         )}
